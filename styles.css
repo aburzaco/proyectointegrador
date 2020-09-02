@@ -1,0 +1,49 @@
+body {
+    background-color: red;
+}
+h1{
+    text-align: center;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 15px;
+  }
+  
+  /* Header*/
+  .header {
+    background-color: slategrey;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* */
+  .topnav {
+    overflow: scroll;
+    background-color: thistle;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: black;
+  }
+  
+  
+.topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  
+ 
+
+  
+  
+ 
+  
