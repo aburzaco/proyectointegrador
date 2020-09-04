@@ -12,14 +12,14 @@ h1{
     margin: 15px;
   }
   
-  /* Header*/
+ 
   .header {
     background-color: slategrey;
     padding: 10px;
     text-align: center;
   }
   
-  /* */
+
   .topnav {
     overflow: scroll;
     background-color: thistle;
@@ -39,6 +39,45 @@ h1{
     background-color: white;
     color: black;
   }
+    
+
+  .tendencias{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+       
+ .lasmejores {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-image-width: 0mm;
+ }
+
+#container {
+    width: 1260px;
+    margin: 2px auto;
+    border: 10px solid black;
+   
+}
+
+#piedep {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+
+
+  .vistas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   
   
  
