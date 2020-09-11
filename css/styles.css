@@ -21,8 +21,9 @@ h1{
   
 
   .topnav {
-    overflow: scroll;
+    overflow: hidden;
     background-color: thistle;
+   
   }
   
   .topnav a {
@@ -30,7 +31,7 @@ h1{
     display: block;
     color: black;
     text-align: center;
-    padding: 15px 20px;
+    padding: 10px 30px;
     text-decoration: black;
   }
   
@@ -39,7 +40,7 @@ h1{
     background-color: white;
     color: black;
   }
-    
+  
 
   .tendencias{
   display: flex;
@@ -96,9 +97,21 @@ h3 {
   background-color: #333;
   }
 
-}
+
 
 .series{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.buscador{
+  
+  text-align: center;
+
+}
+.documentales{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
