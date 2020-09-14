@@ -1,5 +1,5 @@
 body {
- background-color: red; 
+ background-color: black; 
 }
 h1{
     text-align: center;
@@ -14,7 +14,7 @@ h1{
   
  
   .header {
-    background-color: slategrey;
+    background-color:red;
     padding: 10px;
     text-align: center;
   }
@@ -84,17 +84,17 @@ h1{
   
 .topnav{
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 5fr 5fr 5fr;
 }
 
 .buscador {
-  padding: 15px;
+  padding: 8px;
 }
 
 h3 {
   text-align: center;
   overflow: hidden;
-  background-color: #333;
+  background-color: #00008B;
   }
 
 
@@ -109,6 +109,7 @@ h3 {
 .buscador{
   
   text-align: center;
+  
 
 }
 .documentales{
@@ -117,3 +118,10 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+@media only screen and (min-width:420px){
+  ...//mobile
+
+}
+
+
