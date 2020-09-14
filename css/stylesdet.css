@@ -5,12 +5,13 @@
 
 body{
     padding: 0;
-    margin: 0 auto;
-    max-width: 420px;
+    margin: 0;
+    
     background-color: black;
     color: white;
-    line-height: 50px;
+    line-height: 24px;
 }
+/*nav bar*/
 header{
     padding: 7px;
 }
@@ -47,15 +48,67 @@ nav ul li a{
 nav ul li a:hover{
     background: #4a4a4a;
 }
+
+/*pelicula*/
+
 .foto img{
     width: 100%;
-   
 
+}
+.edad, .hora{
+    border: inset rgba(196, 187, 187, 0.5) 1.8px;
+    margin: 4px;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+}
+.info{
+    display: grid;
+    
+}
+.valoracion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*botones*/
+.but i{
+    margin-right: 10px;
+}
+button {
+    background: rgba(196, 187, 187, 0.5);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-size: 12.5px;
+   
+}
+.but{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.but button:hover{
+    background: white;
+    color: black;
+}
+
+.sugerido{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
 }
 
 
-
-.bot img{
+.sugerido img{
     width: 90px;
 }
 
@@ -67,40 +120,17 @@ a {
   color: #fff;
 }
 
-#middle-uno {
-    grid-area: middle1;
-    padding: 2em;
-}
-#middle-dos {
-    grid-area: middle2;
-    padding: 2em;
+#middle-uno, #middle-dos{
+    background-color: rgba(53, 49, 49, 0.5);
+    opacity: 90%;
+    text-align: justify;
+    margin: 40px;
 }
 
-#middle-uno a:hover{
+#middle-dos a:hover{
     color: #7CE3F2;
+    text-decoration: underline;
 }
-
-
-#container{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns:  1fr 1fr;
-    grid-template-areas:
-      
-        "middle-uno  middle-dos";
-    background: #050809;
-    
-}
-
-.bot{
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    margin: 10px;
-}
-
-
 
 
 
@@ -122,8 +152,8 @@ a {
 	text-decoration: none;
 	display: inline-block;
 	/* Volver a dar tamaño al texto */
-	font-size: 32px;
-    font-size: 2rem;
+	font-size: 22px;
+    
     margin-inline-start: 10px;
 	
 	color: rgb(214, 207, 207);
@@ -142,3 +172,51 @@ a {
 }
 /*fin*/
 
+
+
+
+/* desktop*/
+@media(min-width:1024px){
+    .foto{
+        display: none;
+    }
+    .botones{
+        height: 700px;
+        background: url(../images/peliculas/wonder.jpg);
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-right: 0;
+        padding: 20px;
+        margin-bottom: 20px;
+       
+    }
+    #middle-uno {
+        grid-area: middle1;
+        padding: 2em;
+    }
+    #middle-dos {
+        grid-area: middle2;
+        padding: 2em;
+    }
+    
+    
+    
+    
+    #container{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns:  1fr 1fr;
+        grid-template-areas:
+          
+            "middle-uno  middle-dos";
+        background: #050809;
+        
+    }
+    
+}
