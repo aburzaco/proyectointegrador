@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Movie</title>
     <link rel="stylesheet" href="css/stylesdet.css">
+    <script src="https://kit.fontawesome.com/8bd8fd8470.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="header">
-        <nav>
-            <a href="">Home</a>
-            <a href="">Generos</a>
-        </nav>
-        <img src="images/logo.png" alt="Pop film">
-            <a href="">Log in</a>
-    </section>
+    <header>
+        <div class="container">
+            <a href=""><img src="images/logo.png" alt="Logo "> </a>
+            <nav>
+                <ul>
+                    <li> <a href="">Home</a></li>
+                    <li> <a href="">Generos</a></li>
+                
+                    <li> <a href="">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
      <div class="foto">
         <img src="images/peliculas/wonder.jpg" alt="wonder">
     </div>
@@ -26,9 +32,10 @@
             <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
             <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
         </div>
-        <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
+        
         <div>
-            <p>Reproducir</p>
+            <button role="button" class="reproductor"> <i class="fas fa-play"></i>Reproducir</button>
+            <button role="button" class="trailer"> <i class="fas fa-video"></i>Ver trailer</button>
             
         </div>
     </section>
