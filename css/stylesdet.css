@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     padding: 0;
     margin: 0;
@@ -8,23 +9,92 @@ body{
     color: white;
 }
 
+.header img{
+    width: 100px;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: space-between;
+   
+}
+nav{
+    align-items: center;
+}
+
 .foto img{
     width: 100%;
-    height: 40%;
+   
 
 }
+
+/*estrellas de valoración */
+
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo, 
+		pero de esta manera (siempre que no le demos padding), 
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+    font-size: 2rem;
+    margin-inline-start: 10px;
+	
+	color: rgb(214, 207, 207);
+}
+
+.ec-stars-wrapper:hover a {
+    color: orange;
+    
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+    color: rgb(202, 189, 189);
+   
+}
+/*fin*/
 
 .bot img{
-    height: 16%;
+    width: 90px;
 }
 
 
 
-#middle1 {
+a:link, a:visited {
+  text-decoration: none;
+  text-decoration: none;
+ 
+}
+a:visited{
+    color: #fff;
+}
+a:hover{
+    color: #F32018
+    ;
+}
+a:active{
+    color: #EDED0D;
+}
+
+#middle-uno {
     grid-area: middle1;
     padding: 2em;
 }
-#middle2 {
+#middle-dos {
     grid-area: middle2;
     padding: 2em;
 }
@@ -35,18 +105,18 @@ body{
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr;
     grid-template-areas:
       
-        "middle1 middle1 middle1 middle2 middle2 middle2"
-       
+        "middle-uno  middle-dos";
+    background: #050809;
+    
 }
 
 .bot{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
 }
 
-/*sacar numeros*/
