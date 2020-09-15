@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-size:  17px;;
 }
 
 body{
@@ -55,7 +56,7 @@ nav ul li a:hover{
     width: 100%;
 
 }
-.edad, .hora{
+.edad {
     border: inset rgba(196, 187, 187, 0.5) 1.8px;
     margin: 4px;
     box-sizing: border-box;
@@ -77,7 +78,7 @@ nav ul li a:hover{
 .but i{
     margin-right: 10px;
 }
-button {
+ button {
     background: rgba(196, 187, 187, 0.5);
     border: none;
     padding: 10px;
@@ -85,7 +86,8 @@ button {
     margin-right: 10px;
     cursor: pointer;
     transition: all 0.3s linear;
-    font-size: 12.5px;
+    font-size: 15px;
+    border-radius: 3px;
    
 }
 .but{
@@ -98,18 +100,6 @@ button {
 .but button:hover{
     background: white;
     color: black;
-}
-
-.sugerido{
-    display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    margin: 10px;
-}
-
-
-.sugerido img{
-    width: 90px;
 }
 
 
@@ -132,6 +122,31 @@ a {
     text-decoration: underline;
 }
 
+
+
+/*vermas*/
+.vermas{
+    margin-left: 40px;
+}
+
+.sugerido{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+}
+.bottom-trece img, .bottom-catorce img, .bottom-quince img{
+    display: none;
+}
+
+.sugerido img{
+    width: 90px;
+    height: 140px;
+    transition: 0.2s;
+}
+.sugerido img:hover{
+    transform: scale(1.5);
+}
 
 
 
@@ -180,7 +195,15 @@ a {
     .foto{
         display: none;
     }
-    .botones{
+    *{
+        font-size: 22px;
+    }
+    .info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+     }
+    .elementos{
         height: 700px;
         background: url(../images/peliculas/wonder.jpg);
         background-position: center center;
@@ -195,28 +218,32 @@ a {
         margin-bottom: 20px;
        
     }
-    #middle-uno {
-        grid-area: middle1;
-        padding: 2em;
-    }
-    #middle-dos {
-        grid-area: middle2;
-        padding: 2em;
-    }
     
     
     
-    
-    #container{
+    #detalles{
         display: grid;
-        justify-items: center;
-        align-items: center;
-        grid-template-columns:  1fr 1fr;
-        grid-template-areas:
-          
-            "middle-uno  middle-dos";
-        background: #050809;
+        grid-template-columns:  1fr 2fr;
         
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 2px;
+        
+
     }
-    
+    #middle-uno, #middle-dos{
+        background: #000000;
+    }
+    .sugerido img{
+        width: 190px;
+        height: 290px;
+    }
+    .sugerido{
+       display: grid;
+       grid-template-columns: repeat(5,1fr);
+       margin: 5px;
+       grid-gap: 5px;
+       padding: 20px;
+    }
 }
