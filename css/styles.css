@@ -1,19 +1,7 @@
-body {
- background-color: black;
-}
+  body { 
+    background-color: black;
+  }
 
-h1{
-    text-align: center;
-}
- *{
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 15px;
-  }
-  
- 
   .header {
     background-color:red;
     padding: 10px;
@@ -24,8 +12,8 @@ h1{
   .topnav {
     overflow: hidden;
     background-color: thistle;
-   
   }
+  
   
   .topnav a {
     float: left;
@@ -37,41 +25,58 @@ h1{
   }
   
   
-.topnav a:hover {
+  .topnav a:hover{
     background-color: white;
     color: black;
-}
+  }
   
 
   .tendencias{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  
-}
-       
- .lasmejores {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+       
+  .lasmejores {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
- }
-
-#container {
+  #container }
     width: 1260px;
     margin: 2px auto;
     border: 10px solid black;
-}
+  }
 
-#piedep {
+
+  .buscador {
+    display: flex;
+  }
+
+  h3 {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-}
+    overflow: hidden;
+    background-color: slateblue;
+  }
 
 
+
+  .series{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .documentales{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
   .vistas{
     display: flex;
@@ -80,49 +85,32 @@ h1{
     justify-content: space-around;
   }
 
+
+  .buscador{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+
+  .zoom {
+    transition: transform 0.2s;
+  }
   
-  
-
-.buscador {
-  display: flex;
-
-}
-
-h3 {
-  text-align: center;
-  overflow: hidden;
-  background-color: #00008B;
+  .zoom:hover{
+    transform: scale(1.5);
   }
 
 
 
-.series{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  .piedepag {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: black
 
-.buscador{
-  
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center
 
-}
-.documentales{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
-.zoom {
-  transition: transform 0.2s;
-}
-.zoom:hover{
-  transform: scale(1.5);
-}
 
 
