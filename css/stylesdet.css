@@ -141,7 +141,7 @@ a {
 
 .sugerido img{
     width: 90px;
-    height: 140px;
+    height: 150px;
     transition: 0.2s;
 }
 .sugerido img:hover{
@@ -192,6 +192,17 @@ a {
 
 /* desktop*/
 @media(min-width:1024px){
+   header img{
+        width: 180px;
+        margin-left: 30px;    
+    }
+
+    nav ul li a{
+        font-size: 25px;
+        margin-right: 30px;
+    }
+
+    
     .foto{
         display: none;
     }
@@ -219,6 +230,15 @@ a {
        
     }
     
+    button{
+        background: #1d1c1c;
+        font-size: 26px;
+    }
+    .ec-stars-wrapper a{
+        font-size: 35px;
+        color: #1d1c1c;
+        margin-inline-start: 5px;
+    }
     
     
     #detalles{
