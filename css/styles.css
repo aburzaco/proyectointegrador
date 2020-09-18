@@ -1,3 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*nav bar*/
+header{
+  padding: 7px;
+}
+
+.container img{
+  width: 100px;
+}
+.container a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.container{
+ background: #000000;
+ color: white;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  display: block;
+  padding: 2px 8px;
+  transition: all 0.5s linear;
+  border-radius: 3px;
+}
+nav ul li a:hover{
+  background: #4a4a4a;
+}
+.buscador{
+  background: transparent;
+    display:inline-block;
+    transition: all .5s;
+}
+/*pelicula principal*/
+.but i{
+  margin-right: 10px;
+}
+ button {
+  background: rgba(196, 187, 187, 0.5);
+  border: none;
+  padding: 10px;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  font-size: 15px;
+  border-radius: 3px;
+ 
+}
+.but{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.but button:hover{
+  background: white;
+  color: black;
+}
+
+.main-peli .titulo{
+  background: none;
+}
+
+.main-peli img{
+  width: 420px;
+  margin: 0;
+}
+.main-peli .descripcion{
+  display: none;
+}
+ .lanzamiento{
+   margin: 10px;
+    background-color: #252525;
+    display: block;
+    text-align: center;
+    color: #fff;
+
+}
+
+
+
+
 body {
  background-color: black;
 }
@@ -126,3 +227,61 @@ h3 {
 }
 
 
+@media(min-width:1024px){
+  .lanzamiento{
+    display: none;
+  }
+  .main-peli img{
+    display: none;
+  }
+  
+  .container img{
+    width: 180px;
+  }
+  nav ul li a{
+    font-size: 25px;
+    margin-left: 25px;
+}
+  .main-peli{
+    font-size: 16px;
+    min-height: 680px;
+    width: fit-content;
+    background: linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0,0.50)100%), url(../images/peliculas/palmsprings.jpg);
+    color: #ffffff;
+    background-size: cover;
+    background-position: center center ;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .main-peli .titulo{
+    font-weight: 600;
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background: none;
+    text-align: start;
+  }
+  .main-peli .descripcion{
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    max-width: 50%;
+    line-height: 25px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+  }
+  .main-peli .but{
+    background: none;
+    border: none; 
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 400px;
+   
+  }
+  
+}
