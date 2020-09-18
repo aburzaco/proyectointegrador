@@ -1,10 +1,11 @@
 body {
- background-color: black; 
+ background-color: black;
 }
+
 h1{
     text-align: center;
 }
-* {
+ *{
     box-sizing: border-box;
   }
   
@@ -39,7 +40,7 @@ h1{
 .topnav a:hover {
     background-color: white;
     color: black;
-  }
+}
   
 
   .tendencias{
@@ -62,7 +63,6 @@ h1{
     width: 1260px;
     margin: 2px auto;
     border: 10px solid black;
-   
 }
 
 #piedep {
@@ -82,13 +82,10 @@ h1{
 
   
   
-.topnav{
-  display: grid;
-  grid-template-columns: 5fr 5fr 5fr;
-}
 
 .buscador {
-  padding: 8px;
+  display: flex;
+
 }
 
 h3 {
@@ -109,7 +106,9 @@ h3 {
 .buscador{
   
   text-align: center;
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center
 
 }
 .documentales{
@@ -119,9 +118,11 @@ h3 {
   justify-content: space-around;
 }
 
-@media only screen and (min-width:420px){
-  ...//mobile
-
+.zoom {
+  transition: transform 0.2s;
+}
+.zoom:hover{
+  transform: scale(1.5);
 }
 
 
