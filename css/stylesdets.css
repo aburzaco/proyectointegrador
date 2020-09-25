@@ -20,6 +20,11 @@ header{
 header img{
     width: 120px;
     border-radius: 2px;
+    
+}
+.logo{
+    align-self: center;
+    width: 100%;
 }
 
 .container{
@@ -30,11 +35,18 @@ header img{
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
+   font-size: 40px;
+   text-align: center;
+  
+}
+nav{
+    width: 100%;
 }
 nav ul{
     margin: 0;
     padding: 0;
     list-style: none;
+    
     
 }
 nav ul li{
