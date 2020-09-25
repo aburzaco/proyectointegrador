@@ -90,7 +90,7 @@ nav ul li a:hover{
 .but i{
     margin-right: 10px;
 }
- button {
+ .button {
     background: rgba(196, 187, 187, 0.5);
     border: none;
     padding: 10px;
@@ -109,7 +109,7 @@ nav ul li a:hover{
     margin: 10px;
 }
 
-.but button:hover{
+.but .button:hover{
     background: white;
     color: black;
 }

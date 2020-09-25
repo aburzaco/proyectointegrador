@@ -44,15 +44,17 @@ nav ul li a:hover{
   background: #4a4a4a;
 }
 .buscador{
+  
   background: transparent;
-    display:inline-block;
-    transition: all .5s;
+  display:inline-block;
+  transition: all .5s;
+    
 }
 /*pelicula principal*/
 .but i{
   margin-right: 10px;
 }
- button {
+ .button {
   background: rgba(196, 187, 187, 0.5);
   border: none;
   padding: 10px;
@@ -71,7 +73,7 @@ nav ul li a:hover{
   margin: 10px;
 }
 
-.but button:hover{
+.button:hover{
   background: white;
   color: black;
 }
@@ -177,7 +179,7 @@ h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-}
+
 
 .buscador{
   
@@ -188,7 +190,7 @@ h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-}
+
 .documentales{
   display: flex;
   flex-direction: row;
