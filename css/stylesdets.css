@@ -56,17 +56,29 @@ nav ul li a:hover{
     width: 100%;
 
 }
-.edad {
-    border: inset rgba(196, 187, 187, 0.5) 1.8px;
+.edad, .hora{
+    border: inset rgba(196, 187, 187, 0.5) 2.2px;
+    height: fit-content;
+    width: fit-content;
     margin: 4px;
     box-sizing: border-box;
     justify-content: center;
-    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+.infodesktop{
+    display: none;
 }
 .info{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    grid-gap: 3px;
+    font-weight: bold;
     
 }
+
 .valoracion{
     display: flex;
     flex-direction: row;
@@ -110,14 +122,14 @@ a {
   color: #fff;
 }
 
-#middle-uno, #middle-dos{
+.middle-uno, .middle-dos{
     background-color: rgba(53, 49, 49, 0.5);
     opacity: 90%;
     text-align: justify;
     margin: 40px;
 }
 
-#middle-dos a:hover{
+.middle-dos a:hover{
     color: #7CE3F2;
     text-decoration: underline;
 }
@@ -148,7 +160,9 @@ a {
     transform: scale(1.5);
 }
 
-
+.bottom-trece, .bottom-catorce, .bottom-quince{
+    display: none;
+}
 
 
 /*estrellas de valoración */
@@ -209,14 +223,10 @@ a {
     *{
         font-size: 22px;
     }
-    .info{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-     }
+   
     .elementos{
         height: 700px;
-        background: url(../images/peliculas/wonder.jpg);
+        background: url(../images/series/strangerthings-portada.jpg);
         background-position: center center;
         background-size: cover;
         display: flex;
@@ -229,7 +239,17 @@ a {
         margin-bottom: 20px;
        
     }
-    
+    .info{
+        display: none;
+     }
+     .infodesktop{
+         display: block;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+         font-weight: bold ;
+     }
     button{
         background: #1d1c1c;
         font-size: 26px;
@@ -252,8 +272,10 @@ a {
         
 
     }
-    #middle-uno, #middle-dos{
+    .middle-uno, .middle-dos{
         background: #000000;
+        line-height: 30px;
+        
     }
     .sugerido img{
         width: 190px;
