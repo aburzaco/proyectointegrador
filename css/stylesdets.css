@@ -1,0 +1,291 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:  17px;;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    
+    background-color: black;
+    color: white;
+    line-height: 24px;
+}
+/*nav bar*/
+header{
+    padding: 7px;
+}
+
+header img{
+    width: 120px;
+    border-radius: 2px;
+}
+
+.container{
+   background: #000000;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    display: block;
+    padding: 2px 8px;
+    transition: all 0.5s linear;
+    border-radius: 3px;
+}
+nav ul li a:hover{
+    background: #4a4a4a;
+}
+
+/*pelicula*/
+
+.foto img{
+    width: 100%;
+
+}
+.edad, .hora{
+    border: inset rgba(196, 187, 187, 0.5) 2.2px;
+    height: fit-content;
+    width: fit-content;
+    margin: 4px;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+.infodesktop{
+    display: none;
+}
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    grid-gap: 3px;
+    font-weight: bold;
+    
+}
+
+.valoracion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*botones*/
+.but i{
+    margin-right: 10px;
+}
+ button {
+    background: rgba(196, 187, 187, 0.5);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-size: 15px;
+    border-radius: 3px;
+   
+}
+.but{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+.but button:hover{
+    background: white;
+    color: black;
+}
+
+
+
+a {
+  text-decoration: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.middle-uno, .middle-dos{
+    background-color: rgba(53, 49, 49, 0.5);
+    opacity: 90%;
+    text-align: justify;
+    margin: 40px;
+}
+
+.middle-dos a:hover{
+    color: #7CE3F2;
+    text-decoration: underline;
+}
+
+
+
+/*vermas*/
+.vermas{
+    margin-left: 40px;
+}
+
+.sugerido{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 10px;
+}
+.bottom-trece img, .bottom-catorce img, .bottom-quince img{
+    display: none;
+}
+
+.sugerido img{
+    width: 90px;
+    height: 150px;
+    transition: 0.2s;
+}
+.sugerido img:hover{
+    transform: scale(1.5);
+}
+
+.bottom-trece, .bottom-catorce, .bottom-quince{
+    display: none;
+}
+
+
+/*estrellas de valoración */
+
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`) 
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo, 
+		pero de esta manera (siempre que no le demos padding), 
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 22px;
+    
+    margin-inline-start: 10px;
+	
+	color: rgb(214, 207, 207);
+}
+
+.ec-stars-wrapper:hover a {
+    color: orange;
+    transition: all 0.3s linear;
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+    color: rgb(202, 189, 189);
+   
+}
+/*fin*/
+
+
+
+
+/* desktop*/
+@media(min-width:1024px){
+   header img{
+        width: 180px;
+        margin-left: 30px;    
+    }
+
+    nav ul li a{
+        font-size: 25px;
+        margin-right: 30px;
+    }
+
+    
+    .foto{
+        display: none;
+    }
+    *{
+        font-size: 22px;
+    }
+   
+    .elementos{
+        height: 700px;
+        background: url(../images/series/strangerthings-portada.jpg);
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-right: 0;
+        padding: 20px;
+        margin-bottom: 20px;
+       
+    }
+    .info{
+        display: none;
+     }
+     .infodesktop{
+         display: block;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+         font-weight: bold ;
+     }
+    button{
+        background: #1d1c1c;
+        font-size: 26px;
+    }
+    .ec-stars-wrapper a{
+        font-size: 35px;
+        color: #1d1c1c;
+        margin-inline-start: 5px;
+    }
+    
+    
+    #detalles{
+        display: grid;
+        grid-template-columns:  1fr 2fr;
+        
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 2px;
+        
+
+    }
+    .middle-uno, .middle-dos{
+        background: #000000;
+        line-height: 30px;
+        
+    }
+    .sugerido img{
+        width: 190px;
+        height: 290px;
+    }
+    .sugerido{
+       display: grid;
+       grid-template-columns: repeat(5,1fr);
+       margin: 5px;
+       grid-gap: 5px;
+       padding: 20px;
+    }
+}
