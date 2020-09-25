@@ -110,42 +110,13 @@ body {
 h1{
     text-align: center;
 }
- *{
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 15px;
 
-  }
-
-  .header {
-    background-color:red;
-    padding: 10px;
-    text-align: center;
-  }
+ 
+ 
+ 
   
 
-  .topnav {
-    overflow: hidden;
-    background-color: thistle;
-  }
-  
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 10px 30px;
-    text-decoration: black;
-  }
-  
-  
-  .topnav a:hover{
-    background-color: white;
-    color: black;
-  }
+ 
   
 
   .tendencias{
@@ -203,11 +174,11 @@ h1{
   }
 
 
-  .buscador{
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+h3 {
+  text-align: center;
+  overflow: hidden;
+  background-color: #00008B;
+  color: #fff;
   }
 
 
@@ -219,15 +190,34 @@ h1{
     transform: scale(1.5);
   }
 
+.series{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 
-  .piedepag {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: large;
-    color: black
-  }
-
+.buscador{
+  
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.documentales{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 
 
@@ -248,7 +238,7 @@ h1{
 }
   .main-peli{
     font-size: 16px;
-    min-height: 680px;
+    min-height: 100%;
     width: fit-content;
     background: linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0,0.50)100%), url(../images/peliculas/palmsprings.jpg);
     color: #ffffff;
