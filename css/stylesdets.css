@@ -132,9 +132,51 @@ nav ul li a:hover{
 
 a {
   text-decoration: none;
-  text-decoration: none;
+  
   color: #fff;
 }
+
+/* boton de temporadas*/
+.temp-cap{
+    width: auto;
+    margin-bottom: 30px;
+    
+
+ }
+ ul{
+    padding-inline-start: 0px;
+ }
+.temporada li {
+    list-style-type: none;
+    
+}
+.temporada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.temporada li a {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    width: 150px;
+}
+.temporada li a:hover{
+    background: rgb(214, 207, 207);
+}
+.temporada li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+.temporada li:hover > ul{
+    display: block;
+    
+}
+
 
 .middle-uno, .middle-dos{
     background-color: rgba(53, 49, 49, 0.5);
@@ -287,11 +329,13 @@ a {
          margin-inline-start: 5px;
      }
      
-     
+     .temporada li a {
+         width: 180px;
+     }
      #detalles{
          display: grid;
          grid-template-columns:  1fr 2fr;
-         
+    
          justify-content: center;
          align-items: center;
          align-content: center;
