@@ -310,9 +310,19 @@ a {
 
     .sugerido{
        display: grid;
-       grid-template-columns: repeat(5,1fr);
-       margin: 50px;
+       grid-template-columns: repeat(4,1fr);
+       margin: 30px;
        grid-gap: 5px;
        padding: 20px;
+       
     }
 }   
+@media(min-width:1400px){
+    .sugerido{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin: 50px;
+        grid-gap: 5px;
+        padding: 20px;
+     }
+}
