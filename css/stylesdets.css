@@ -18,7 +18,7 @@ header{
 }
 
 header img{
-    width: 120px;
+    width: 145px;
     border-radius: 2px;
     
 }
@@ -37,6 +37,7 @@ header img{
    align-items: center;
    font-size: 40px;
    text-align: center;
+  
   
 }
 nav{
@@ -112,6 +113,7 @@ nav ul li a:hover{
     transition: all 0.3s linear;
     font-size: 15px;
     border-radius: 3px;
+    text-align: center;
    
 }
 .but{
@@ -130,15 +132,62 @@ nav ul li a:hover{
 
 a {
   text-decoration: none;
-  text-decoration: none;
+  
   color: #fff;
 }
 
+/* nav de temporadas*/
+.temp-cap{
+    width: auto;
+    margin-bottom: 30px;
+    
+
+ }
+ ul{
+    padding-inline-start: 0px;
+ }
+
+.temporada li {
+    list-style-type: none;
+    
+}
+.temporada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    
+}
+
+.temporada li a {
+    background-color: #4a4a4a;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    width: 150px;
+}
+.temporada li a:hover{
+    background: rgb(214, 207, 207);
+}
+.temporada li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+.temporada li:hover > ul{
+    display: block;
+    
+}
+
+#detalles{
+    z-index:2;
+}
 .middle-uno, .middle-dos{
     background-color: rgba(53, 49, 49, 0.5);
     opacity: 90%;
     text-align: justify;
     margin: 40px;
+    
 }
 
 .middle-dos a:hover{
@@ -155,7 +204,7 @@ a {
 
 .sugerido{
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-template-columns:   1fr 1fr 1fr;
     grid-gap: 10px;
     margin: 10px;
 }
@@ -164,8 +213,8 @@ a {
 }
 
 .sugerido img{
-    width: 90px;
-    height: 150px;
+    width: 130px;
+    height: 250px;
     transition: 0.2s;
 }
 .sugerido img:hover{
@@ -218,86 +267,118 @@ a {
 
 /* desktop*/
 @media(min-width:1024px){
-   header img{
-        width: 180px;
-        margin-left: 30px;    
-    }
-
-    nav ul li a{
-        font-size: 25px;
-        margin-right: 30px;
-    }
-
     
-    .foto{
-        display: none;
-    }
-    *{
-        font-size: 22px;
-    }
-   
-    .elementos{
-        height: 700px;
-        background: url(../images/series/strangerthings-portada.jpg);
-        background-position: center center;
-        background-size: cover;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-right: 0;
-        padding: 20px;
-        margin-bottom: 20px;
-       
-    }
-    .info{
-        display: none;
+
+    header img{
+         width: 250px;
+         height: 100%;
+         margin-left: 30px; 
+          
      }
-     .infodesktop{
-         display: block;
+     .logo{
+         align-self: unset;
+     }
+     nav ul li a{
+         font-size: 25px;
+         margin-right: 30px;
+         margin-top: 30px;
+         margin-bottom: 30px;
+     }
+ 
+     .container{
+         display: grid;
+         grid-template-columns: 1fr 2fr;
+         align-items: center;
+ 
+     }
+     .foto{
+         display: none;
+     }
+     *{
+         font-size: 22px;
+     }
+    
+     .elementos{
+         height: 700px;
+         background: url(../images/series/strangerthings-portada.jpg);
+         background-position: center center;
+         background-size: cover;
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
-         justify-content: space-evenly;
-         font-weight: bold ;
+         align-items: flex-end;
+         justify-content: space-between;
+         margin-right: 0;
+         padding: 20px;
+         margin-bottom: 20px;
+        
      }
-    button{
-        background: #1d1c1c;
-        font-size: 26px;
-    }
-    .ec-stars-wrapper a{
-        font-size: 35px;
-        color: #1d1c1c;
-        margin-inline-start: 5px;
-    }
+     .info{
+         display: none;
+      }
+      .infodesktop{
+          display: block;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          font-weight: bold ;
+      }
+     .button{
+         background: #1d1c1c;
+         font-size: 26px;
+     }
+     .ec-stars-wrapper a{
+         font-size: 35px;
+         color: #e9dece;
+         margin-inline-start: 5px;
+     }
+     
+     .temporada li a {
+         width: 180px;
+     }
+     #detalles{
+         display: grid;
+         grid-template-columns:  1fr 2fr;
     
-    
-    #detalles{
-        display: grid;
-        grid-template-columns:  1fr 2fr;
-        
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        padding: 2px;
-        
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 2px;
+         
+ 
+     }
+     .middle-uno, .middle-dos{
+         background: #000000;
+         line-height: 30px;
+         
+     }
+     .sugerido img{
+         width: 240px;
+         height: 330px;
+     }
+     .bottom-trece img, .bottom-catorce img, .bottom-quince img{
+        display: block;
+    }
+     
 
-    }
-    .middle-uno, .middle-dos{
-        background: #000000;
-        line-height: 30px;
-        
-    }
-    .sugerido img{
-        width: 190px;
-        height: 290px;
-    }
     .sugerido{
-       display: grid;
-       grid-template-columns: repeat(5,1fr);
-       margin: 5px;
-       grid-gap: 5px;
-       padding: 20px;
-    }
-}
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 30px;
+        grid-gap: 5px;
+        padding: 20px;
+        
+     }
+     @media(min-width:1400px){
+        .sugerido{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            margin: 50px;
+            grid-gap: 5px;
+            padding: 20px;
+         }
+
+     }
+ }   
+ 
