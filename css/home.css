@@ -344,6 +344,7 @@ input{
     margin-left: 20px;
     background: none;
     text-align: start;
+    padding: 20px;
   }
   .main-peli .descripcion{
     display: block;
