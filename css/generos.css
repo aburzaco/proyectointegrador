@@ -82,8 +82,33 @@ nav ul li a:hover{
     .container{
         display: grid;
         grid-template-columns: 1fr 2fr;
-        align-items: center;
-
+        align-items: center;    
+    }
+    h3 {
+        text-align: center;
+        overflow: hidden;
+        background-color: rgb(21, 4, 131);
+      }
+      /*zoom de imagenes*/
+      .zoom {
+       transition: transform 0.2s;
+     }
+  
+      .zoom:hover{
+      transform: scale(1.5);
     }
 
+    img{
+        margin: 65px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 280px;
+        width: 220px;
+        
+    }  
+    
+      
  }
