@@ -157,4 +157,17 @@ body{
       padding: 5px;
     }
 
+    img{
+        margin: 65px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 280px;
+        width: 220px;
+        
+    }  
+    
+      
  }
