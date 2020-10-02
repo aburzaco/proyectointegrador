@@ -432,9 +432,7 @@ h3 {
          width: 240px;
          height: 330px;
      }
-     .bottom-trece , .bottom-catorce , .bottom-quince {
-        display: block;
-    }
+  
      
 
     .sugerido{
@@ -449,6 +447,9 @@ h3 {
  }
  
  @media(min-width:1393px){
+    .ocultarp img{
+        display: none;
+      }
     .sugerido{
         display: grid;
         grid-template-columns: repeat(5,1fr);

@@ -385,7 +385,7 @@ h3 {
         width: 240px;
         height: 330px;
     }
-    .oculto img{display: block;}
+    
 
     .sugerido{
        display: grid;
@@ -396,7 +396,10 @@ h3 {
        
     }
 }   
-@media(min-width:1400px){
+@media(min-width:1390px){
+  .ocultarp img{
+    display: none;
+  }
     .sugerido{
         display: grid;
         grid-template-columns: repeat(5,1fr);
