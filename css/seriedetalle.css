@@ -242,18 +242,22 @@ a {
 
 .sugerido{
     display: grid;
-    grid-template-columns:   1fr 1fr 1fr;
+    grid-template-columns:    1fr 1fr;
     grid-gap: 10px;
     margin: 10px;
+
+}
+.sugerido a{
+    text-align: center;
 }
 .bottom-trece img, .bottom-catorce img, .bottom-quince img{
     display: none;
 }
 
 .sugerido img{
-    width: 130px;
+    width: 195px;
     height: 250px;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .sugerido img:hover{
     transform: scale(1.5);

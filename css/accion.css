@@ -100,13 +100,22 @@ body{
     padding: 5px;
   
   }
-
- h2{
+  h2 {
+    text-align: center;
+    overflow: hidden;
+    background-color:#252525;
+    color: #fff;
+    font-size: 25px;
+    height: 40px;
+    padding: 9px;
+  }
+ h3{
   text-align: center;
   display: block;
   background-color:  #252525;
  
 }
+
 
   /*peliculas*/
   .ps-accion{
@@ -123,8 +132,11 @@ body{
   .ps-accion img:hover{
     transform: scale(1.5);
   }
-  a{
+   a{
     text-align: center;
+  }
+  .ocultar{
+    display: none;
   }
     
   @media(min-width:1024px){
@@ -172,10 +184,31 @@ body{
       color: #fff;
       padding: 5px;
     }
+    
 
     /*peliculas*/
+    h2{
+      font-size: 30px;
+
+    
+      height: 62px;
+      padding: 20px;
+     
+    }
     .ps-accion{
       grid-template-columns: repeat(4, 1fr);
       
     }
+    .ps-accion img{
+      width: 240px;
+       height: 320px;
+    }
+ }
+ @media(min-width:1370px){
+   .ocultar{
+     display: block;
+   }
+   .ps-accion{
+     grid-template-columns: repeat(5, 1fr);
+   }
  }

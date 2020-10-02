@@ -116,14 +116,20 @@ a {
 .actriz img{
     width: 100%;
 }
+.pitufos{
+  display: none;
+}
 
 .peliculas img{
-    width: 130px;
-    height: 230px;
+  width: 205px;
+  height: 280px;
+}
+.peliculas a{
+  text-align: center;
 }
 .peliculas{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px;
     margin: 10px;
    
@@ -229,7 +235,9 @@ a {
         background: none;
         font-size: 37px;
     }
-  
+  .pitufos{
+    display: block;
+  }
     .peliculas img{
         width: 200px;
         height: 300px;
