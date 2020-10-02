@@ -113,7 +113,7 @@ input{
   .button {
     background: rgba(196, 187, 187, 0.5);
     border: none;
-    padding: 10px;
+    padding: 8px;
     color: #fff;
  
     cursor: pointer;
@@ -251,7 +251,9 @@ input{
 
 
   /*zoom de imagenes*/
-
+.peli-serie a{
+  text-align: center;
+}
 .peli-serie img{
   width: 205px;
   height: 280px;

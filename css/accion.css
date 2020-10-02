@@ -100,6 +100,32 @@ body{
     padding: 5px;
   
   }
+
+ h2{
+  text-align: center;
+  display: block;
+  background-color:  #252525;
+ 
+}
+
+  /*peliculas*/
+  .ps-accion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    margin: 5px;
+  }
+  .ps-accion img{
+    width: 180px;
+    height: 250px;
+    transition: transform 0.4s;
+  }
+  .ps-accion img:hover{
+    transform: scale(1.5);
+  }
+  a{
+    text-align: center;
+  }
     
   @media(min-width:1024px){
     header img{
@@ -145,5 +171,11 @@ body{
       border-radius: 3px;
       color: #fff;
       padding: 5px;
+    }
+
+    /*peliculas*/
+    .ps-accion{
+      grid-template-columns: repeat(4, 1fr);
+      
     }
  }
