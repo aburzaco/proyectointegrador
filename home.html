@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pop Film </title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/8bd8fd8470.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
@@ -12,35 +12,34 @@
 
 
 <body>
-  <div>
-    <div class="header">
-      <h1>Pop Film</h1>
-      <p> Peliculas, Series y Documentales en un solo lugar!</p>
-    </div>
-  
-  
-  <div class="container">
-    <nav>
-        <ul>
-          <li> <a href="home.html">HOME</a></li>
-            <li> <a href="generos.html">GÉNEROS</a></li>
-            <li> <a href="">INICIAR SESIÓN</a></li>
-        </ul>
-
-    </nav>
-    <a href=""><img src="images/logo.png" alt="Logo "> </a>
-    
-    <section class="buscador">
-      <form action=""method></form>
+  <div class="cabecera">
+    <header>
+      <div class="container">
+          <div class="logo">
+               <a  href=""><img src="images/logo.png" alt="Logo "> </a>
+          </div>
+          <nav>
+              <ul>
+                  <li> <a href="home.html">HOME</a></li>
+                  <li> <a href="generos.html">GÉNEROS</a></li>
+                  <li> <a href="">INICIAR SESIÓN</a></li>
+              </ul>
+          </nav>
+          
+      </div>
+      
+  </header>
+  <section class="buscador">
+    <form action=""method></form>
       <div class="buscador"> 
-    <input class="search" type="search" placeholder="Buscar">		    	
-    <button>Buscar</button></div>
-      </form>
-    </div>
-   
-    </section>
+      <input class="search" type="search" placeholder="Stranger Things...">		    	
+      <button class="lupa"><i class="fas fa-search"></i></button></div>
+    </form>
+  
+  </section>
+  </div>
     
-   </div>
+   
    <div class="main-peli">
      <div class="peli-contenedor">
        <h3 class="lanzamiento"> Nuevo lanzamiento</h3>
@@ -52,60 +51,78 @@
         <div class="but">
           <a role="button" class="button"> <i class="fas fa-play"></i>Reproducir</a>
           <a role="button" class="button"> <i class="fas fa-video"></i>Ver trailer</a>
-          <a role="button" class="button">  <i class="fas fa-video"></i>Mas información</a>
+          <a role="button" href="detallep.html" class="button">  <i class="fas fa-info-circle"></i>Información</a>
         </div>
     </div>
    </div>
     
  <main>
-    <h2>Peliculas</h2>
+   
     <section class="contenidodeproducto">
     
-      <h3>Recomendadas</h3>
-        <section class="recomendadas">
-          <a href=""><img class="zoom" src="img/jobs.jpeg" alt="herbieatodamarcha"></a>
-          <a href=""><img class="zoom" src="img/el lobo de wall street .jpeg" alt="ellobodewallstreet"></a>
-          <a href=""><img class="zoom" src="img/facebook.jpeg" alt="facebook"></a> 
-          <a href=""><img class="zoom" src="img/jurassic world.jpeg" alt="jurassicworld"></a>
-          <a class="chihuahua" href=""><img class="zoom" src="img/chihuahua.jpeg" alt="chihuahua"></a>
-        </section>
+      <a  href=""><h3>Recomendadas</h3></a>
+      
+      <section class="peli-serie">
+        <div class="recomendadas">
+          <a href="detallep.html"><img src="img/jobs.jpeg" alt="herbieatodamarcha"></a>
+          <a href="detallep.html"><img  src="img/el lobo de wall street .jpeg" alt="ellobodewallstreet"></a>
+          <a href="detallep.html"><img  src="img/facebook.jpeg" alt="facebook"></a> 
+          <a href="detallep.html"><img  src="img/jurassic world.jpeg" alt="jurassicworld"></a>
+          <a class="chihuahua" href="detallep.html"><img src="img/chihuahua.jpeg" alt="chihuahua"></a>
+        </div>
+      </section>
         
 
-        <h3>Tendencias</h3>
-        <section class="tendencias">
-          <a href=""><img class="zoom" src="img/fiebre de ladrillo.jpeg" alt="fiebredeladrillo"></a>
-          <a href=""><img class="zoom" src="img/hastaelutimo.jpeg" alt="hastaelutimo"></a>
-          <a href=""><img class="zoom" src="img/mac donals.jpeg" alt="macdonals"></a>
-          <a href=""><img class="zoom" src="img/toy story.jpeg" alt="toystory"></a>
-          <a class="loimposible" href=""><img class="zoom" src="img/loimposible.jpeg" alt="loimposible"></a>
-        </section>
+        <a href=""><h3>Tendencias</h3></a>
+       
+          <section class="peli-serie">
+            <div class="tendencias">
+            <a href="detallep.html"><img src="img/fiebre de ladrillo.jpeg" alt="fiebredeladrillo"></a>
+            <a href="detallep.html"><img src="img/hastaelutimo.jpeg" alt="hastaelutimo"></a>
+            <a href="detallep.html"><img  src="img/mac donals.jpeg" alt="macdonals"></a>
+            <a href="detallep.html"><img  src="img/toy story.jpeg" alt="toystory"></a>
+            <a class="loimposible" href="detallep.html"><img src="img/loimposible.jpeg" alt="loimposible"></a>
+          </div>
+          </section>
+       
 
-        <h3>Mas vistas</h3>
-        <section class="vistas">
-            <a href=""><img class="zoom" src="img/nemo.jpeg" alt="nemo"></a>
-            <a href=""><img class="zoom" src="img/Guason.jpeg" alt="elguason"></a>
-            <a href=""><img  class="zoom" src="img/sin limites.jpeg" alt="sinlimites"></a>
-            <a href="detallep.html"><img  class="zoom" src="img/wonder.jpeg" alt="wonder"></a>
-            <a class="avatar" href=""><img  class="zoom" src="img/avatar.jpeg" alt="avatar"></a>
-           
-        </section>
-
-       <h3>Series</h3>
-        <section class="series">
-          <a href=""><img  class="zoom" src="img/greyanatomy.jpeg" alt="greyanatomy"></a>
-          <a href=""><img  class="zoom" src="img/strangerthings.jpeg" alt="strangerthings"></a>
-          <a href=""><img  class="zoom" src="img/breaking bad.jpeg" alt="breakingbad"></a>
-          <a href=""><img  class="zoom" src="img/peakyblinders.jpeg" alt="peakyblinders"></a>
-          <a class="dark" href=""><img  class="zoom" src="img/darkserie.jpeg" alt="darkserie"></a>
-        </section>
+        <a href=""><h3>Mas vistas</h3></a>
+       
+          <section class="peli-serie">
+            <div class="vistas">
+              <a href="detallep.html"><img src="img/nemo.jpeg" alt="nemo"></a>
+              <a href="detallep.html"><img  src="img/Guason.jpeg" alt="elguason"></a>
+              <a href="detallep.html"><img  src="img/sin limites.jpeg" alt="sinlimites"></a>
+              <a href="detallep.html"><img src="img/wonder.jpeg" alt="wonder"></a>
+              <a class="avatar" href="detallep.html"><img src="img/avatar.jpeg" alt="avatar"></a>
+            </div>
+          </section>
+       
+       <a href=""><h3>Series</h3></a>
+      
+          <section class="peli-serie">
+            <div  class="series">
+            <a href="detalles.html"><img  src="img/greyanatomy.jpeg" alt="greyanatomy"></a>
+            <a href="detalles.html"><img src="img/strangerthings.jpeg" alt="strangerthings"></a>
+            <a href="detalles.html"><img  src="img/breaking bad.jpeg" alt="breakingbad"></a>
+            <a href="detalles.html"><img  src="img/peakyblinders.jpeg" alt="peakyblinders"></a>
+            <a class="dark" href="detalles.html"><img  src="img/darkserie.jpeg" alt="darkserie"></a>
+          </div>
+          </section>
+        
   
-        <h3>Documentales</h3>
-        <section class="documentales">
-          <a href=""><img  class="zoom" src="img/sennadocumental.jpeg" alt="sennadocumental"></a>
-          <a href=""><img  class="zoom" src="img/whatthehealth.jpeg" alt="whatthehealth"></a>
-          <a href=""><img  class="zoom" src="img/enpocaspalabras.png" alt="enpocaspalabras"></a>
-          <a class="apache" href=""><img  class="zoom" src="img/documentaltevez.jpeg" alt="documentaltevez"></a>
-      </section>
+        <a href=""></a><h3>Documentales</h3></a>
+     
+          <section class="peli-serie">
+            <div class="documentales">
+            <a href="detallep.html"><img   src="img/sennadocumental.jpeg" alt="sennadocumental"></a>
+            <a href="detallep.html"><img   src="img/whatthehealth.jpeg" alt="whatthehealth"></a>
+            <a href="detallep.html"><img   src="img/enpocaspalabras.png" alt="enpocaspalabras"></a>
+            <a class="apache" href="detalles.html"><img   src="img/documentaltevez.jpeg" alt="documentaltevez"></a>
+            <a class="atleta" href="detallep.html"> <img src="img/atleta 2.jpg" alt=""></a>
+          </div>
+          </section>
+      
 
     
 

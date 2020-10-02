@@ -1,74 +1,109 @@
   body { 
     background-color: black;
+    padding: 0;
+    margin: 0;
+  
+    color: white;
+    line-height: 24px;
   }
 
   *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size:  19px;
   }
   /*nav bar*/
-  header{
-    padding: 7px;
-  }
+header{
+  padding: 7px;
+}
 
-  .container img{
-    width: 100px;
-  }
-  .container a{
-    text-decoration: none;
-    color: #ffffff;
-  }
-  .container{
-    background: #000000;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+header img{
+  width: 145px;
+  border-radius: 2px;
+}
+.logo{
+  align-self: center;
+  width: 100%;
+  margin-bottom: 1px ;
+}
+
+.container{
+  background: #000000;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px;
+  text-align: center;
+ 
+ 
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+nav{
+  width: 100%;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
   
-  }
-  nav ul li{
-    display: inline-block;
-  }
-  nav ul li a{
-    display: block;
-    padding: 2px 8px;
-    transition: all 0.5s linear;
-    border-radius: 3px;
-  }
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  display: block;
+  padding: 2px 8px;
+  transition: all 0.5s linear;
+  border-radius: 3px;
+}
+nav ul li a:hover{
+  background: #4a4a4a;
+}
 
-  nav ul li a:hover{
-    background: #4a4a4a;
-  }
+.buscador{
 
-  .buscador{
+  background: transparent;
+  display:inline-block;
+  transition: all .5s;
+  
+}
 
-    background: transparent;
-    display:inline-block;
-    transition: all .5s;
-    
-  }
+/*barradebuscar*/
+.buscador{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input{
+  width: 100%;
+  border: none;
+  background: rgba(196, 187, 187, 0.5);
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px;
 
-  .buscador {
-    display: flex;
-  }
+}
+.lupa{
+  border: none;
+  background: rgba(196, 187, 187, 0.5);
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px;
 
-  .buscador{
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+}
+  
+
 
 
   /*pelicula principal*/
@@ -80,16 +115,17 @@
     border: none;
     padding: 10px;
     color: #fff;
-    margin-right: 10px;
+ 
     cursor: pointer;
     transition: all 0.3s linear;
     font-size: 15px;
     border-radius: 3px;
+    text-align: center;
  
   }
   .but{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin: 10px;
   }
@@ -101,10 +137,13 @@
 
   .main-peli .titulo{
     background: none;
+    text-align: center;
+    font-size: 25px;
+    margin: 20px;
   }
 
   .main-peli img{
-    width: 420px;
+    width: 100%;
     margin: 0;
   }
   .main-peli .descripcion{
@@ -125,9 +164,7 @@
   }
 
 
-  h1{
-    text-align: center;
-  }
+  
 
  /*tendencias*/
   .tendencias{
@@ -137,11 +174,6 @@
     justify-content: space-around;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-
-  .tendencias img{
-    height: 300px;
-    width: 250px;
   }
 
   .loimposible{
@@ -158,43 +190,7 @@
     margin-bottom: 10px;
 
   }
-  .vistas img{
-    height: 300px;
-    width: 250px;
-  }
-
   .avatar{
-    display: none;
-  }
-
-  #container {
-    width: 1260px;
-    margin: 2px auto;
-    border: 10px solid black;
-  }
-
-
-  h3 {
-    text-align: center;
-    overflow: hidden;
-    background-color: slateblue;
-  }
-  
-  /*series*/
-  .series{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .series img{
-    height: 243px;
-    width: 200px;
-  }
-
-  .dark{
     display: none;
   }
 
@@ -207,18 +203,13 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+.atleta{
+  display: none;
+}
 
-  .documentales img{
-    height: 243px;
-    width: 200px;
-  }
-
-  apache{
-    display: none;
-  }
-  
 
  /*recomendadas*/
+ 
   .recomendadas{
     display: flex;
     flex-direction: row;
@@ -226,10 +217,6 @@
     justify-content: space-around;
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-  .recomendadas img{ 
-    height: 300px;
-    width: 250px;
   }
 
   .chihuahua{
@@ -245,31 +232,43 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.series img {
-  height: 300px;
-  width: 250px;
+
+.dark{
+  display: none;
 }
 
 
-  h3 {
+ h3 {
     text-align: center;
     overflow: hidden;
-    background-color: #00008B;
+    background-color:#252525;
     color: #fff;
+    font-size: 22px;
+    margin-top: 15px;
   }
+  
+
+
 
   /*zoom de imagenes*/
-  .zoom {
-    transition: transform 0.2s;
+
+.peli-serie img{
+  width: 205px;
+  height: 280px;
+}
+  .peli-serie img{
+    transition: transform 0.4s;
   }
-  
-  .zoom:hover{
+  .peli-serie img:hover{
     transform: scale(1.5);
   }
-
-
   
   
+
+  
+  a h3:hover {
+    text-decoration: underline;
+  }
 
 
 
@@ -281,16 +280,54 @@
     display: none;
   }
   
-  .container img{
-    width: 180px;
-  }
-  nav ul li a{
+ 
+  header img{
+    width: 250px;
+    height: 100%;
+    margin-left: 0; 
+       
+}
+.logo{
+    align-self: unset;
+
+}
+nav{
+  justify-content: center;
+}
+nav ul li a{
     font-size: 25px;
-    margin-left: 25px;
+  margin: 8px;
+}
+
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+
+}
+.cabecera{
+  display: grid;
+  grid-template-columns: 3fr 1fr
+  ;
+}
+.buscador{
+  text-align: center;
+  display: flex;
+ 
+  align-items: center;
+}
+input{
+  width: 196px;
+  border: none;
+  background: rgba(196, 187, 187, 0.5);
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px;
 }
   .main-peli{
     font-size: 16px;
-    min-height: 350px;
+    min-height: 650px;
     width: fit-content;
     background: linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0,0.50)100%), url(../images/peliculas/palmsprings.jpg);
     color: #ffffff;
@@ -307,6 +344,7 @@
     margin-left: 20px;
     background: none;
     text-align: start;
+    padding: 20px;
   }
   .main-peli .descripcion{
     display: block;
@@ -329,5 +367,16 @@
     width: 400px;
    
   }
-  
+  .button{
+    width: 168px;
+  }
+  .peli-serie img{
+    width: 240px;
+    height: 320px;
+  }
+}
+@media(min-width:1374px){
+  .dark, .avatar, .loimposible, .chihuahua, .atleta{
+    display: block;
+  }
 }

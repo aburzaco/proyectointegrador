@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:  18px;;
+    font-size:  19px;;
     padding: 0;
     margin: 0;
     height: auto;
@@ -15,23 +15,24 @@ body{
     color: white;
     line-height: 24px;
 }
-/*nav bar*/
-header{
+ /*nav bar*/
+ header{
     padding: 7px;
-}
-
-header img{
+  }
+  
+  header img{
     width: 145px;
     border-radius: 2px;
-}
-.logo{
+  }
+  .logo{
     align-self: center;
     width: 100%;
-}
-
-.container{
+    margin-bottom: 1px ;
+  }
+  
+  .container{
     background: #000000;
-    color: white;
+  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,28 +42,68 @@ header img{
     text-align: center;
    
    
-}
-nav{
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  nav{
     width: 100%;
-}
-nav ul{
+  }
+  nav ul{
     margin: 0;
     padding: 0;
     list-style: none;
     
-}
-nav ul li{
+  }
+  nav ul li{
     display: inline-block;
-}
-nav ul li a{
+  }
+  nav ul li a{
     display: block;
     padding: 2px 8px;
     transition: all 0.5s linear;
     border-radius: 3px;
-}
-nav ul li a:hover{
+  }
+  nav ul li a:hover{
     background: #4a4a4a;
-}
+  }
+  
+  .buscador{
+  
+    background: transparent;
+    display:inline-block;
+    transition: all .5s;
+    
+  }
+  
+  /*barradebuscar*/
+  .buscador{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  input{
+    width: 100%;
+    border: none;
+    background: rgba(196, 187, 187, 0.5);
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px;
+  
+  }
+  .lupa{
+    border: none;
+    background: rgba(196, 187, 187, 0.5);
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px;
+  
+  }
+    
 
 
 a {
@@ -119,33 +160,64 @@ a {
     text-decoration: underline;
  }
 
+
+
+ h3 {
+  text-align: center;
+  overflow: hidden;
+  background-color:#252525;
+  color: #fff;
+  font-size: 19px;
+}
  @media(min-width:1024px){
     *{
         font-size: 25px;
         line-height: 30px;
     }
     header img{
-        width: 250px;
-        height: 100%;
-        margin-left: 30px; 
-           
-    }
-    .logo{
-        align-self: unset;
-    }
-    nav ul li a{
-        font-size: 25px;
-        margin-right: 30px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .container{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        align-items: center;
-
-    }
+      width: 250px;
+      height: 100%;
+      margin-left: 0; 
+         
+  }
+  .logo{
+      align-self: unset;
+  
+  }
+  nav{
+    justify-content: center;
+  }
+  nav ul li a{
+      font-size: 25px;
+    margin: 8px;
+  }
+  
+  
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  
+  }
+  .cabecera{
+    display: grid;
+    grid-template-columns: 3fr 1fr
+    ;
+  }
+  .buscador{
+    text-align: center;
+    display: flex;
+   
+    align-items: center;
+  }
+  input{
+    width: 196px;
+    border: none;
+    background: rgba(196, 187, 187, 0.5);
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px;
+  }
     .actriz img{
        width: 80%;
        height: auto;

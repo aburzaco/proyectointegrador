@@ -101,17 +101,7 @@ body{
   
   }
     
-/*titulos*/
- h3 {
-    text-align: center;
-    overflow: hidden;
-    background-color:#252525;
-    color: #fff;
-    font-size: 22px;
-  }
-  
-/* desktop*/
-@media(min-width:1024px){
+  @media(min-width:1024px){
     header img{
         width: 250px;
         height: 100%;
@@ -156,18 +146,4 @@ body{
       color: #fff;
       padding: 5px;
     }
-
-    img{
-        margin: 65px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        height: 280px;
-        width: 220px;
-        
-    }  
-    
-      
  }
