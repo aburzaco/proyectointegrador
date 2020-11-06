@@ -141,6 +141,28 @@ a h3:hover{
   .oculta{
     display: none;
   }
+
+
+  /*pie de pag*/
+  footer{
+    background:#252525;
+    margin: 5px;
+  
+  }
+
+  .bott{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  footer img{
+    width: 200px;
+   
+  
+  }
+footer h3{
+  font-size: 19px;
+}
 /* desktop*/
 @media(min-width:1024px){
     header img{
@@ -201,6 +223,22 @@ a h3:hover{
       height: 62px;
       padding: 20px;
     }
+
+    footer{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    footer img{
+      width: 150px;
+    }
+    footer section h3{
+      margin: 10px;
+    }
+    footer .redes{
+      display: flex;
+    }
+   
       
  }
  @media(min-width:1378px){
