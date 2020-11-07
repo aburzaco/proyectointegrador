@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8bd8fd8470.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
     <title>Pop Film</title>
 </head>
@@ -41,23 +41,32 @@
         <h2>Iniciar sesión</h2> 
         
         <form action="inicio.html" method="GET">
-        <div class="form-group">
-            <label for="">Nombre de Usuario:</label>
-            <input type="text" name="userName" class="form-typen" value="">
-        </div>    
-        <div class="form-group">
-            <label for="">Contraseña:</label>
-            <input type="password" name="password" class="form-type-p" value="">
+        <div>
+            <label for="">Nombre de Usuario</label>
+            <input type="text" name="userName">
         </div>
+        <div>
+            <label for="">Correo ELectrónico</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">Contraseña</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="">Repetir Contraseña</label>
+            <input type="password" name="rePassword">
+        </div>
+            
             <button type="submit"> Ingresar</button>
         </form>
-        <h3>Registrarse <a href="register.html">aquí</a></h3>
+        <h3>Iniciar sesión <a href="login.html">aquí</a></h3>
 
       </div>
 
-      <footer>
+
       <section class="piedepag">
-        
+        <footer></footer>
         <h3>
           Valentina D' Aquino, Dante Pancino 
           y Alvaro Burzaco - Programacion 1 
@@ -70,7 +79,8 @@
           <h3><i class="fab fa-facebook-square"></i> Pop Flix</h3>
         </section>
        </div>
+      </footer>
       </section>
-    </footer>
+
 </body>
 </html>
