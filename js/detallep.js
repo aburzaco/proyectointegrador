@@ -20,64 +20,38 @@ fetch(`id`)
 })
 .catch(error => console.log(error))*/
 
-const fila = document.querySelector('.contenedor-carousel');
-const peliculas = document.querySelectorAll('.pelicula');
 
-const flechaIzquierda = document.getElementById('flecha-izquierda');
-const flechaDerecha = document.getElementById('flecha-derecha');
 
-// ? ----- ----- Event Listener para la flecha derecha. ----- -----
-flechaDerecha.addEventListener('click', () => {
-	fila.scrollLeft += fila.offsetWidth;
 
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.nextSibling){
-		indicadorActivo.nextSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
 
-// ? ----- ----- Event Listener para la flecha izquierda. ----- -----
-flechaIzquierda.addEventListener('click', () => {
-	fila.scrollLeft -= fila.offsetWidth;
 
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.previousSibling){
-		indicadorActivo.previousSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
+/* let media ="movies";
+let timeWindow = "week";
+let apiKey = "764e5562e5fed92cb370d453ac0ed8a3";
+let url = `https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${apiKey}`;
+let tendencias = document.querySelector( '.tendencias') */
 
-// ? ----- ----- Paginacion ----- -----
-const numeroPaginas = Math.ceil(peliculas.length / 5);
-for(let i = 0; i < numeroPaginas; i++){
-	const indicador = document.createElement('button');
+/* fetch('https://api.themoviedb.org/3/trending/movies/week?api_key=764e5562e5fed92cb370d453ac0ed8a3')
+    .then(function(respuestas){
+        return respuestas.json();
+    })
+    .then (function(data){
+        console.log(data);
 
-	if(i === 0){
-		indicador.classList.add('activo');
-	}
-
-	document.querySelector('.indicadores').appendChild(indicador);
-	indicador.addEventListener('click', (e) => {
-		fila.scrollLeft = i * fila.offsetWidth;
-
-		document.querySelector('.indicadores .activo').classList.remove('activo');
-		e.target.classList.add('activo');
-    });
-    console.log(indicador)
-}
-
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
-
-fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-});
+        let info= data.results 
+        let pelicula = document.querySelector( '.carousel__elemento ')
+        //let id = info.id
+		//console.log(id);
+		let imagen = document.querySelector ('.pelis ')
+        for (let i=0; i<info.length; i++){
+/* 
+            pelicula.innerHTML += 
+                                        ` <a href="detallep.html?id{info[i].id}"><img src="https://image.tmdb.org/t/p/w500/${info[i].poster_path}" alt=""></a>
+                                       
+                                       `
+								}  */
+		/* 	imagen.src= `https://image.tmdb.org/t/p/w500/${info[i].poster_path}`
+			 }
+	})
+	
+	 */ */
