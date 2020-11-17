@@ -54,4 +54,4 @@ let tendencias = document.querySelector( '.tendencias') */
 			 }
 	})
 	
-	 */ */
+	 */
