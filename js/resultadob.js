@@ -21,9 +21,20 @@ fetch(url)
 
     for (let i=0; i<info.length; i++){
         if(info[i].media_type == "tv"){
-            resultados.innerHTML += `<li>Serie: ${info[i].original_name}</li>`
+            /* resultados.innerHTML += `<li>Serie: ${info[i].original_name}</li>` */
+            resultados.innerHTML += `<li>
+                                        <a href="detallep.html?id=${info[i].id}">
+                                            <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
+                                         </a>
+                                    </li>`
         } else if (info[i].media_type == "movie"){
-            resultados.innerHTML += `<li>Pelicula: ${info[i].title}</li>`
+            /* resultados.innerHTML += `<li>Pelicula: ${info[i].title}</li>` */
+
+            resultados.innerHTML += `<li>
+                                        <a href="detallep.html?id=${info[i].id}">
+                                            <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
+                                        </a>
+                                    </li>`
         }
         
     }

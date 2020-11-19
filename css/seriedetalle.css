@@ -65,6 +65,8 @@ body{
   }
   nav ul li a:hover{
     background: #4a4a4a;
+    color: #fff;
+    text-decoration: none;
   }
   
   .buscador{
@@ -119,9 +121,7 @@ body{
     align-items: center;
 
 }
-.infodesktop{
-    display: none;
-}
+
 .info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -165,6 +165,7 @@ body{
 .but .button:hover{
     background: white;
     color: black;
+    text-decoration: none;
 }
 
 
@@ -175,54 +176,8 @@ a {
   color: #fff;
 }
 
-/* nav de temporadas*/
-.temp-cap{
-    width: auto;
-    margin-bottom: 30px;
-    
 
- }
- ul{
-    padding-inline-start: 0px;
- }
-
-.temporada li {
-    list-style-type: none;
-    
-}
-.temporada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    
-}
-
-.temporada li a {
-    background-color: #4a4a4a;
-    color: #fff;
-    padding: 10px 15px;
-    display: block;
-    width: 135px;
-    font-size: 15px;
-    
-}
-.temporada li a:hover{
-    background: rgb(214, 207, 207);
-}
-.temporada li ul {
-    display: none;
-    position: absolute;
-    min-width: 140px;
-    z-index: 999;
-}
-.temporada li:hover > ul{
-    display: block;
-    
-}
-
-
-.middle-uno, .middle-dos{
+.middle-uno, .middle-dos, .middle-between div{
     background-color: rgba(53, 49, 49, 0.5);
     opacity: 90%;
     text-align: justify;
@@ -231,42 +186,36 @@ a {
 }
 
 .middle-dos a:hover{
-    color: #7CE3F2;
+    color: white;
     text-decoration: underline;
 }
 
 
 
-/*vermas*/
-.vermas{
-    margin-left: 40px;
+.release{
+  text-align: center;
 }
 
-.sugerido{
-    display: grid;
-    grid-template-columns:    1fr 1fr;
-    grid-gap: 10px;
-    margin: 10px;
+#detalles h2{
+  color: #fff;
+  text-align: center;
+  margin-top: 17px;
+  font-size: 24px;
+  margin-bottom: 7px;
 
 }
-.sugerido a{
-    text-align: center;
+.titu{
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  margin-top: 28px;
 }
-.bottom-trece img, .bottom-catorce img, .bottom-quince img{
-    display: none;
+.tipos-r, .tipos-g, .tipos-c{
+  margin: 5px;
+  text-align: center;
 }
-
-.sugerido img{
-    width: 195px;
-    height: 250px;
-    transition: 0.3s;
-}
-.sugerido img:hover{
-    transform: scale(1.5);
-}
-
-.bottom-trece, .bottom-catorce, .bottom-quince{
-    display: none;
+.tag{
+  text-align: center;
 }
 
 
@@ -296,6 +245,7 @@ a {
 .ec-stars-wrapper:hover a {
     color: orange;
     transition: all 0.3s linear;
+    text-decoration: none;
 }
 /*
  * El selector de hijo, es necesario para aumentar la especifidad
@@ -306,6 +256,13 @@ a {
 }
 /*fin*/
 
+.puntos{
+  margin-top: 15px;
+  display: flex;
+}
+.valor{
+  margin-left: 75px
+}
 
 
 h3 {
@@ -341,9 +298,7 @@ footer h3{
 /* desktop*/
 @media(min-width:1024px){
     
-    .foto{
-        display: none;
-    }
+    
     header img{
         width: 250px;
         height: 100%;
@@ -393,24 +348,8 @@ footer h3{
          font-size: 22px;
      }
     
-     .elementos{
-         height: 700px;
-         background:linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0,0.50)100%), url(../images/series/strangerthings-portada.jpg);
-         background-position: center center;
-         background-size: cover;
-         display: flex;
-         flex-direction: row;
-         flex-wrap: wrap;
-         align-items: flex-end;
-         justify-content: space-between;
-         margin-right: 0;
-         padding: 20px;
-         margin-bottom: 20px;
-        
-     }
-     .info{
-         display: none;
-      }
+     
+     
       .infodesktop{
           display: block;
           display: flex;
@@ -429,13 +368,10 @@ footer h3{
          margin-inline-start: 5px;
      }
      
-     .temporada li a {
-         width: 180px;
-         font-size: 20px;
-     }
+    
      #detalles{
          display: grid;
-         grid-template-columns:  1fr 2fr;
+         grid-template-columns:  1fr 1fr 1fr;
     
          justify-content: center;
          align-items: center;
@@ -444,26 +380,12 @@ footer h3{
          
  
      }
-     .middle-uno, .middle-dos{
+     .middle-uno, .middle-dos, .middle-between div{
          background: #000000;
          line-height: 30px;
          
      }
-     .sugerido img{
-         width: 240px;
-         height: 330px;
-     }
-  
-     
-
-    .sugerido{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        margin: 30px;
-        grid-gap: 5px;
-        padding: 20px;
-        
-     }
+    
      footer{
       display: flex;
       justify-content: space-around;
@@ -478,185 +400,44 @@ footer h3{
     footer .redes{
       display: flex;
     }
-   
-        
+    .valoracion a{
+      color: white;
+       }
+      .but a{
+        background: rgba(196, 187, 187, 0.5);
+        border: none;
+        padding: 10px;
+        color: #fff;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        font-size: 20px;
+        border-radius: 3px;
+        text-align: center;
+        width: 250px;
+     
+       } 
+       .elementos{
+         display: flex;
+         justify-content: space-between;
+         margin: 20px;
+       }
+       .titu{
+         font-size: 70px;
+       }
  }
+
+.vermas{
+  color: white;
+  text-align: center;
+  display: block;
+  background-color:  #252525;
  
- @media(min-width:1393px){
-    .ocultarp img{
-        display: none;
-      }
-    .sugerido{
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-        margin: 50px;
-        grid-gap: 5px;
-        padding: 20px;
-     }
- }
-
-
-
-/*  carrousel */
-:root {
-	--rojo: #E50914;
-
-  background-color: black;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+footer h3{
+color: white;
 }
-
-body {
-	background: var(--fondo);
-	font-family: 'Open Sans', sans-serif;
+header li a, .middle-dos a{
+color: white;
 }
-
-.contenedor {
-	width: 90%;
-	margin: auto;
-}
-
-
-
-
-/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
-.contenedor-titulo-controles {
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
-}
-
-.contenedor-titulo-controles h3 {
-	color: #fff;
-	font-size: 30px;
-}
-
-.contenedor-titulo-controles .indicadores button {
-	background: #fff;
-	height: 3px;
-	width: 10px;
-	cursor: pointer;
-	border: none;
-	margin-right: 2px;
-}
-
-.contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button.activo {
-	background: red;
-}
-
-
-/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
-.peliculas-recomendadas {
-	margin-bottom: 70px;
-}
-
-.peliculas-recomendadas .contenedor-principal {
-	display: flex;
-	align-items: center;
-	position: relative;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
-	position: absolute;
-	border: none;
-	background: rgba(0,0,0,0.3);
-	font-size: 40px;
-	height: 50%;
-	top: calc(50% - 25%);
-	line-height: 40px;
-	width: 50px;
-	color: #fff;
-	cursor: pointer;
-	z-index: 500;
-	transition: .2s ease all;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
-	background: rgba(0,0,0, .9);
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
-	left: 0;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
-	right: 0;
-}
-
-/* ---- ----- ----- Carousel ----- ----- ----- */
-.peliculas-recomendadas .contenedor-carousel {
-	width: 100%;
-	padding: 20px 0;
-	overflow: hidden;
-	scroll-behavior: smooth;
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel {
-	display: flex;
-	flex-wrap: nowrap;
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
-	min-width: 20%;
-	transition: .3s ease all;
-	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
-	transform: scale(1.2);
-	transform-origin: center;
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
-	width: 100%;
-	vertical-align: top;
-}
-
-/* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
-	header .logotipo {
-		margin-bottom: 10px;
-		font-size: 30px;
-	}
-
-	header .contenedor {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.pelicula-principal {
-		font-size: 14px;
-	}
-
-	.pelicula-principal .descripcion {
-		max-width: 100%;
-	}
-
-	.peliculas-recomendadas .contenedor-carousel {
-		overflow: visible;
-	}
-
-	.peliculas-recomendadas .contenedor-carousel .carousel {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-	}
-
-.peliculas-recomendadas .indicadores,
-	.peliculas-recomendadas .flecha-izquierda,
-	.peliculas-recomendadas .flecha-derecha {
-		display: none;
-  } 
-.ocultar{
-  display: none;
-}
-
-}
-

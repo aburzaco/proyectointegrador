@@ -1,61 +1,128 @@
-const fila = document.querySelector('.contenedor-carousel');
-const peliculas = document.querySelectorAll('.pelicula');
+let queryString = window.location.search;
+console.log(queryString);
+let queryObject = new URLSearchParams(queryString)
+let id = queryObject.get ('id');
+console.log(id);
 
-const flechaIzquierda = document.getElementById('flecha-izquierda');
-const flechaDerecha = document.getElementById('flecha-derecha');
+let apiKey = "764e5562e5fed92cb370d453ac0ed8a3"
+let url = `https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}`;
 
-// ? ----- ----- Event Listener para la flecha derecha. ----- -----
-flechaDerecha.addEventListener('click', () => {
-	fila.scrollLeft += fila.offsetWidth;
+let elementos = document.querySelector('.elementos')
+let descripcion = document.querySelector('.middle-uno')
+let titulo = document.querySelector('.titulo')
+let generos = document.querySelector ('.tipos-g')
+let companias = document.querySelector('.tipos-c')
+let release = document.querySelector ('.release')
+let foto = document.querySelector('.foto')
+let votos = document.querySelector('.votos')
+let temp = document.querySelector('.middle-between')
+fetch(url)
+.then(function (respuestas){
+    return respuestas.json()
+})
 
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.nextSibling){
-		indicadorActivo.nextSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
+.then(function(data){
+    console.log(data)
+    let genero = data.genres
+    console.log(genero);
+    let company = data.production_companies
+	console.log(company);
+	/* let fecha = data.episode_run_time.__proto__
+	console.log(fecha); */
+	let temporadas = data.seasons
+
+  
+    titulo.innerHTML += `<h2 class="titu" >${data.original_name}</h2>`
+    votos.innerHTML += 
+                        `<p class="valor">" Vote% ${data.vote_average} "</p>`
+    descripcion.innerHTML +=
+                           ` <div class="infodesktop">
+                                <p class="tag">${data.tagline}</p>
+                                
+                            </div>
+                            <p class="descripcion"> "${data.overview}"</p>`
+/* 
+    release.innerHTML += 
+						`<p class= "release" >  ${data.release_date}</p>` */
+						
+
+    foto.innerHTML=
+				`<img src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="">`
+				
+
+    for(let i=0; i<genero.length; i++){
+    generos.innerHTML += 
+                       `<a href= "" >${genero[i].name}</a>`
+                    }
+
+ for(let i=0; i<company.length; i++){
+     companias.innerHTML += 
+                            `<a href= "" >${company[i].name}</a>`
+ } 
+/* 
+ for(let i=0; i<fecha.length; i++){
+	release.innerHTML += 
+						   `<a href= "" >${fecha[i].first_air_date}</a>`
+}  */
+	release.innerHTML += 
+						`<p >${data.first_air_date}</p>`
+for(let i=0; i<temporadas.length; i++){
+	temp.innerHTML += 
+							`<div > 
+								<h2 class= "nombreTemp" >${temporadas[i].name} </h2>
+								<p class="descripcionTemp">${temporadas[i].overview} </p>
+							</div>`
+	} 
+})
+.catch(error => console.log(error))
+
+
+//slider por AJV
+
+let media ="tv";
+let timeWindow = "week";
+
+
+
+let slider = document.querySelector('.uk-slider-items')
+
+
+fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${apiKey}`)
+
+
+
+.then(function(data){
+    console.log(data.results);
+    let info = data.results;
+    /* 
+    for(let i=0; i<info.length; i++){
+        slider.innerHTML += `<li>
+                                <a href="detalles.html?id=${info[i].id}"> 
+                                    <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
+                                  
+                                </a>
+                            </li>`
+    }*/
+        
+})
+.catch(error => console.log(error))
+
+
+fetch(`https://api.themoviedb.org/3/tv/${id}/reviews?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=1`)
+
+.then(function (respuestas){
+    return respuestas.json()
+})
+.then(function(data){
+	console.log(data)
+	let rev = data.results
+	let reviews = document.querySelector ('.reviews')
+
+	for(let i=0; i<rev.length; i++){
+		reviews.innerHTML= 
+							`<h3>${rev[i].author}</h3>
+							<p>${rev[i].content}</p>`
 	}
-});
+})
 
-// ? ----- ----- Event Listener para la flecha izquierda. ----- -----
-flechaIzquierda.addEventListener('click', () => {
-	fila.scrollLeft -= fila.offsetWidth;
-
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.previousSibling){
-		indicadorActivo.previousSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
-
-// ? ----- ----- Paginacion ----- -----
-const numeroPaginas = Math.ceil(peliculas.length / 5);
-for(let i = 0; i < numeroPaginas; i++){
-	const indicador = document.createElement('button');
-
-	if(i === 0){
-		indicador.classList.add('activo');
-	}
-
-	document.querySelector('.indicadores').appendChild(indicador);
-	indicador.addEventListener('click', (e) => {
-		fila.scrollLeft = i * fila.offsetWidth;
-
-		document.querySelector('.indicadores .activo').classList.remove('activo');
-		e.target.classList.add('activo');
-    });
-    console.log(indicador)
-}
-
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
-
-fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-});
+.catch(error => console.log(error))

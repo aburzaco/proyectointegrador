@@ -18,7 +18,7 @@ fetch(url)
     let info = data.results;
     
     for(let i=0; i<info.length; i++){
-        slider.innerHTML += `<li>
+        slider.innerHTML += `<li class= "imagen">
                                 <a href="detallep.html?id=${info[i].id}">
                                     <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
                                     <div class="uk-position-center uk-panel">

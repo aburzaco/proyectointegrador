@@ -127,6 +127,38 @@ footer h3{
 }
 
 
+
+/*pelis*/
+h3{
+  text-align: center;
+  display: block;
+  background-color:  #252525;
+ padding: 5px;
+ font-size: 23px;
+}
+.resultados{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  margin: 5px;
+}
+.resultados img{
+  width: 180px;
+  height: 250px;
+  transition: transform 0.4s;
+}
+.resultados img:hover{
+  transform: scale(1.5);
+}
+ a{
+  text-align: center;
+}
+ul li{
+  list-style: none;
+}
+
+
+
   /* desktop*/
 @media(min-width:1024px){
     header img{
@@ -188,4 +220,31 @@ footer h3{
       footer .redes{
         display: flex;
       }
-    }  
+
+
+    
+      /*peliculas*/
+    h2{
+      font-size: 30px;
+
+    
+      height: 62px;
+      padding: 20px;
+     
+    }
+    .resultados{
+      grid-template-columns: repeat(4, 1fr);
+      
+    }
+    .resultados img{
+      width: 240px;
+       height: 320px;
+    }
+}  
+
+    @media(min-width:1370px){
+     
+      .resultados{
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
