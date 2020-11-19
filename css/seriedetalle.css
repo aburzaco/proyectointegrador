@@ -177,7 +177,7 @@ a {
 }
 
 
-.middle-uno, .middle-dos, .middle-between div{
+.middle-uno, .middle-dos, .middle-between div, .reviews{
     background-color: rgba(53, 49, 49, 0.5);
     opacity: 90%;
     text-align: justify;
@@ -196,7 +196,7 @@ a {
   text-align: center;
 }
 
-#detalles h2{
+#detalles h2, .reviews h2{
   color: #fff;
   text-align: center;
   margin-top: 17px;
@@ -204,6 +204,7 @@ a {
   margin-bottom: 7px;
 
 }
+
 .titu{
   text-align: center;
   color: #fff;
@@ -263,7 +264,10 @@ a {
 .valor{
   margin-left: 75px
 }
-
+.reviews 
+.reviews p{
+  text-align: center;
+}
 
 h3 {
     text-align: center;

@@ -27,8 +27,7 @@ fetch(url)
     console.log(genero);
     let company = data.production_companies
 	console.log(company);
-	/* let fecha = data.episode_run_time.__proto__
-	console.log(fecha); */
+
 	let temporadas = data.seasons
 
   
@@ -88,13 +87,14 @@ let slider = document.querySelector('.uk-slider-items')
 
 
 fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${apiKey}`)
-
-
+.then(function (respuestas){
+    return respuestas.json()
+})
 
 .then(function(data){
     console.log(data.results);
     let info = data.results;
-    /* 
+    
     for(let i=0; i<info.length; i++){
         slider.innerHTML += `<li>
                                 <a href="detalles.html?id=${info[i].id}"> 
@@ -102,10 +102,11 @@ fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${ap
                                   
                                 </a>
                             </li>`
-    }*/
+    }
         
 })
 .catch(error => console.log(error))
+
 
 
 fetch(`https://api.themoviedb.org/3/tv/${id}/reviews?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=1`)
@@ -119,9 +120,9 @@ fetch(`https://api.themoviedb.org/3/tv/${id}/reviews?api_key=764e5562e5fed92cb37
 	let reviews = document.querySelector ('.reviews')
 
 	for(let i=0; i<rev.length; i++){
-		reviews.innerHTML= 
-							`<h3>${rev[i].author}</h3>
-							<p>${rev[i].content}</p>`
+		reviews.innerHTML += 
+							`
+							<p>${rev[i].author}: ${rev[i].content}</p>`
 	}
 })
 

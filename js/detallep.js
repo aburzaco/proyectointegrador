@@ -94,3 +94,21 @@ fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${ap
 })
 .catch(error => console.log(error))
 
+fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=1`)
+
+.then(function (respuestas){
+    return respuestas.json()
+})
+.then(function(data){
+	console.log(data)
+	let rev = data.results
+	let reviews = document.querySelector ('.reviews')
+
+	for(let i=0; i<rev.length; i++){
+		reviews.innerHTML += 
+							`
+							<p>${rev[i].author}: ${rev[i].content}</p>`
+	}
+})
+
+.catch(error => console.log(error))
