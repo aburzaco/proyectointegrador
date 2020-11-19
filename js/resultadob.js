@@ -23,7 +23,7 @@ fetch(url)
         if(info[i].media_type == "tv"){
             /* resultados.innerHTML += `<li>Serie: ${info[i].original_name}</li>` */
             resultados.innerHTML += `<li>
-                                        <a href="detallep.html?id=${info[i].id}">
+                                        <a href="detalles.html?id=${info[i].id}">
                                             <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
                                          </a>
                                     </li>`
