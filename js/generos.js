@@ -1,61 +1,53 @@
-const fila = document.querySelector('.contenedor-carousel');
-const peliculas = document.querySelectorAll('.pelicula');
 
-const flechaIzquierda = document.getElementById('flecha-izquierda');
-const flechaDerecha = document.getElementById('flecha-derecha');
 
-// ? ----- ----- Event Listener para la flecha derecha. ----- -----
-flechaDerecha.addEventListener('click', () => {
-	fila.scrollLeft += fila.offsetWidth;
+let generoMovie = document.querySelector('.genm')
 
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.nextSibling){
-		indicadorActivo.nextSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
 
-// ? ----- ----- Event Listener para la flecha izquierda. ----- -----
-flechaIzquierda.addEventListener('click', () => {
-	fila.scrollLeft -= fila.offsetWidth;
+fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US')
+.then(function (respuestas){
+    return respuestas.json()
+})
 
-	const indicadorActivo = document.querySelector('.indicadores .activo');
-	if(indicadorActivo.previousSibling){
-		indicadorActivo.previousSibling.classList.add('activo');
-		indicadorActivo.classList.remove('activo');
-	}
-});
+.then(function(data){
+    console.log(data.genres);
+   	let genres = data.genres;
+    
+    for(let i=0; i<genres.length; i++){
+		generoMovie.innerHTML += `
+							
+							<ul>
+								<li>
+									<a href="generodetalle.html?id=${genres[i].id}">${genres[i].name}</a>
+								</li>
+							</ul>`
+    }
+        
+})
+.catch(error => console.log(error))
 
-// ? ----- ----- Paginacion ----- -----
-const numeroPaginas = Math.ceil(peliculas.length / 5);
-for(let i = 0; i < numeroPaginas; i++){
-	const indicador = document.createElement('button');
 
-	if(i === 0){
-		indicador.classList.add('activo');
-	}
+let generoSerie = document.querySelector('.gense')
 
-	document.querySelector('.indicadores').appendChild(indicador);
-	indicador.addEventListener('click', (e) => {
-		fila.scrollLeft = i * fila.offsetWidth;
 
-		document.querySelector('.indicadores .activo').classList.remove('activo');
-		e.target.classList.add('activo');
-    });
-    console.log(indicador)
-}
+fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US')
+.then(function (respuestas){
+    return respuestas.json()
+})
 
-// ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
-	pelicula.addEventListener('mouseenter', (e) => {
-		const elemento = e.currentTarget;
-		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-			elemento.classList.add('hover');
-		}, 300);
-	});
-});
+.then(function(data){
+    console.log(data.genres);
+   	let genresTwo = data.genres;
+    
+    for(let i=0; i<genresTwo.length; i++){
+		generoSerie.innerHTML += `
+							
+							<ul>
+								<li>
+									<a href="generodetalle.html?id=${genresTwo[i].id}">${genresTwo[i].name}</a>
+								</li>
+							</ul>`
+    }
+        
+})
+.catch(error => console.log(error))
 
-fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
-});
