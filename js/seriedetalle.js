@@ -127,3 +127,24 @@ fetch(`https://api.themoviedb.org/3/tv/${id}/reviews?api_key=764e5562e5fed92cb37
 })
 
 .catch(error => console.log(error))
+
+
+fetch(`https://api.themoviedb.org/3/tv/${id}/credits?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US`)
+.then(function (respuestas){
+    return respuestas.json()
+})
+
+.then(function(data){
+    console.log(data)
+    let cast = data.cast
+    console.log(cast);
+    let actores = document.querySelector ('.actores')
+
+    for(let i=0; i<cast.length; i++){
+        actores.innerHTML += 
+                                `<a href= "actor.html?id=${cast[i].id}"> ${cast[i].name}, </a>`
+    }
+
+})
+
+.catch(error => console.log(error))

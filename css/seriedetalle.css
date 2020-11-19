@@ -177,10 +177,10 @@ a {
 }
 
 
-.middle-uno, .middle-dos, .middle-between div, .reviews{
+.middle-uno, .middle-dos, .middle-between div, .reviews, .act{
     background-color: rgba(53, 49, 49, 0.5);
     opacity: 90%;
-    text-align: justify;
+    text-align: center;
     margin: 40px;
     
 }
@@ -196,7 +196,7 @@ a {
   text-align: center;
 }
 
-#detalles h2, .reviews h2{
+#detalles h2, .reviews h2, .act h2{
   color: #fff;
   text-align: center;
   margin-top: 17px;
@@ -442,6 +442,9 @@ footer h3{
 footer h3{
 color: white;
 }
-header li a, .middle-dos a{
-color: white;
+header li a, .middle-dos a, .act a{
+  color: white;
+}
+.act a:hover{
+  color: #fff;
 }
