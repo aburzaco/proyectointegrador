@@ -26,6 +26,8 @@ fetch(url)
     console.log(genero);
     let company = data.production_companies
     console.log(company);
+    let poster = data.backdrop_path
+    console.log(poster);
 
    /*  if(data.media_type == "tv"){
         titulo.innerHTML+= `<h2>${data.original_name}<h2>`
@@ -44,13 +46,15 @@ fetch(url)
 
     release.innerHTML += 
                         `<p class= "release" >  ${data.release_date}</p>`
-
-    foto.innerHTML=
-                `<img src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="">`
-
+    if(poster == ""){
+        foto.innerHTML +=
+                `<img src="https://image.tmdb.org/t/p/w500/${poster}" alt="">`
+     } /* else{
+        foto.innerHTML+= `<img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">`
+     } */
     for(let i=0; i<genero.length; i++){
     generos.innerHTML += 
-                       `<a href= "" >${genero[i].name}</a>`
+                       `<a href= "generodetalle.html?id=${genero[i].id}" >${genero[i].name}, </a>`
                     }
 
  for(let i=0; i<company.length; i++){
@@ -94,3 +98,43 @@ fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${ap
 })
 .catch(error => console.log(error))
 
+fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=1`)
+
+.then(function (respuestas){
+    return respuestas.json()
+})
+.then(function(data){
+	console.log(data)
+	let rev = data.results
+	let reviews = document.querySelector ('.reviews')
+
+	for(let i=0; i<rev.length; i++){
+		reviews.innerHTML += 
+							`
+							<p>${rev[i].author}: ${rev[i].content}</p>`
+	}
+})
+
+.catch(error => console.log(error))
+
+
+
+fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US`)
+.then(function (respuestas){
+    return respuestas.json()
+})
+
+.then(function(data){
+    console.log(data)
+    let cast = data.cast
+    console.log(cast);
+    let actores = document.querySelector ('.actores')
+
+    for(let i=0; i<cast.length; i++){
+        actores.innerHTML += 
+                                `<a href= "actor.html?id=${cast[i].id}"> ${cast[i].name}, </a>`
+    }
+
+})
+
+.catch(error => console.log(error))

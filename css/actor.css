@@ -114,7 +114,11 @@ a {
 
 
 .actriz img{
-    width: 100%;
+    width: 80%;
+}
+.actriz{
+  display: flex;
+  justify-content: center;
 }
 .pitufos{
   display: none;
@@ -248,7 +252,7 @@ font-size: 19px;
     padding: 5px;
   }
     .actriz img{
-       width: 80%;
+       width: 40%;
        height: auto;
         display: block;
         margin: auto;

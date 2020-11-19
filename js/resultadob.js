@@ -10,6 +10,7 @@ let url = `https://api.themoviedb.org/3/search/multi?api_key=764e5562e5fed92cb37
 
 let resultados = document.querySelector('.resultados')
 
+
 fetch(url)
 .then(function (respuestas){
     return respuestas.json()
@@ -23,7 +24,7 @@ fetch(url)
         if(info[i].media_type == "tv"){
             /* resultados.innerHTML += `<li>Serie: ${info[i].original_name}</li>` */
             resultados.innerHTML += `<li>
-                                        <a href="detallep.html?id=${info[i].id}">
+                                        <a href="detalles.html?id=${info[i].id}">
                                             <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
                                          </a>
                                     </li>`

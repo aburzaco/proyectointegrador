@@ -135,10 +135,7 @@ body{
    a{
     text-align: center;
   }
-  .ocultar{
-    display: none;
-  }
-
+  
 
   /*piedepag*/
   footer{
@@ -146,6 +143,10 @@ body{
     margin: 5px;
   
   }
+  .piedepag{
+    font-size: 19px;
+  }
+ 
 
   .bott{
     display: flex;
