@@ -18,6 +18,7 @@ const campos = {
  }
 
 const validarFormulario = (e) => {
+
 	switch (e.target.name) {
 		case "usuario":
 			validarCampo(expresiones.usuario, e.target, 'usuario');
@@ -87,11 +88,11 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
 	
-
+	event.preventDefault();
 	const terminos = document.getElementById('terminos');
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
 		formulario.reset();
-
+	
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
@@ -103,4 +104,5 @@ formulario.addEventListener('submit', (e) => {
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
+
 });
