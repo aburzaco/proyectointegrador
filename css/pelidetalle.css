@@ -64,6 +64,8 @@ body{
   }
   nav ul li a:hover{
     background: #4a4a4a;
+    color: #fff;
+    text-decoration: none;
   }
   
   .buscador{
@@ -119,17 +121,8 @@ body{
     align-items: center;
 
 }
-.infodesktop{
-    display: none;
-}
-.info{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
-    grid-gap: 3px;
-    font-weight: bold;
-    
-}
+
+
 
 .valoracion{
     display: flex;
@@ -167,6 +160,7 @@ body{
 .but .button:hover{
     background: white;
     color: black;
+    text-decoration: none;
 }
 
 
@@ -189,8 +183,31 @@ a {
     text-decoration: underline;
 }
 
+.release{
+  text-align: center;
+}
 
+#detalles h2{
+  color: #fff;
+  text-align: center;
+  margin-top: 17px;
+  font-size: 24px;
+  margin-bottom: 7px;
 
+}
+.titu{
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  margin-top: 28px;
+}
+.tipos-r, .tipos-g, .tipos-c{
+  margin: 5px;
+  text-align: center;
+}
+.tag{
+  text-align: center;
+}
 /*vermas*/
 
 
@@ -223,6 +240,7 @@ a {
 .ec-stars-wrapper:hover a {
     color: orange;
     transition: all 0.3s linear;
+    text-decoration: none;
 }
 /*
  * El selector de hijo, es necesario para aumentar la especifidad
@@ -231,9 +249,15 @@ a {
     color: rgb(202, 189, 189);
    
 }
+
 /*fin*/
-
-
+.puntos{
+  margin-top: 15px;
+  display: flex;
+}
+.valor{
+  margin-left: 75px
+}
 
 
 h3 {
@@ -315,31 +339,14 @@ font-size: 19px;
       color: #fff;
       padding: 5px;
     }
-    .foto{
-        display: none;
-    }
+  
     *{
         font-size: 22px;
     }
-   
-    .elementos{
-        height: 700px;
-        background: linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0,0.50)100%),url(../images/peliculas/wonder.jpg);
-        background-position: center center;
-        background-size: cover;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-right: 0;
-        padding: 20px;
-        margin-bottom: 20px;
+ 
        
-    }
-    .info{
-        display: none;
-     }
+    
+    .
      .infodesktop{
          display: block;
          display: flex;
@@ -361,7 +368,7 @@ font-size: 19px;
     
     #detalles{
         display: grid;
-        grid-template-columns:  1fr 2fr;
+        grid-template-columns:  1fr 1fr;
         
         justify-content: center;
         align-items: center;
@@ -390,10 +397,33 @@ font-size: 19px;
     footer .redes{
       display: flex;
     }
-   
-   
-   
-}   
+   .valoracion a{
+     color: white;
+
+   }
+   .but a{
+    background: rgba(196, 187, 187, 0.5);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+    width: 250px;
+ 
+   } 
+   .elementos{
+     display: flex;
+     justify-content: space-between;
+     margin: 20px;
+   }
+   .titu{
+     font-size: 70px;
+   }
+ }
 @media(min-width:1390px){
   
   

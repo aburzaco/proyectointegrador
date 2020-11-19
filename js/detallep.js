@@ -8,8 +8,13 @@ let apiKey = "764e5562e5fed92cb370d453ac0ed8a3"
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
 
 let elementos = document.querySelector('.elementos')
-
-
+let descripcion = document.querySelector('.middle-uno')
+let titulo = document.querySelector('.titulo')
+let generos = document.querySelector ('.tipos-g')
+let companias = document.querySelector('.tipos-c')
+let release = document.querySelector('.tipos-r')
+let foto = document.querySelector('.foto')
+let votos = document.querySelector('.votos')
 fetch(url)
 .then(function (respuestas){
     return respuestas.json()
@@ -17,16 +22,42 @@ fetch(url)
 
 .then(function(data){
     console.log(data)
-    elementos.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.poster_path})`
-/*    descripcion.innerHTML +=
-                           ` <div class="infodesktop">
-                                <p class="edad">"${data.vote_average} "</p>
-                                <p class="hora"></p>
+    let genero = data.genres
+    console.log(genero);
+    let company = data.production_companies
+    console.log(company);
 
+   /*  if(data.media_type == "tv"){
+        titulo.innerHTML+= `<h2>${data.original_name}<h2>`
+    } else if (data.media_type == "movie"){
+      titulo.innerHTML += `<h2>${data.title}</h2>`
+    } */
+    titulo.innerHTML += `<h2 class="titu" >${data.title}</h2>`
+    votos.innerHTML += 
+                        `<p class="valor">" Vote% ${data.vote_average} "</p>`
+    descripcion.innerHTML +=
+                           ` <div class="infodesktop">
+                                <p class="tag">${data.tagline}</p>
+                                
                             </div>
-                            <p class="descripcion"> "${data.overview}"</p>` */
-             
-    
+                            <p class="descripcion"> "${data.overview}"</p>`
+
+    release.innerHTML += 
+                        `<p class= "release" >  ${data.release_date}</p>`
+
+    foto.innerHTML=
+                `<img src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="">`
+
+    for(let i=0; i<genero.length; i++){
+    generos.innerHTML += 
+                       `<a href= "" >${genero[i].name}</a>`
+                    }
+
+ for(let i=0; i<company.length; i++){
+     companias.innerHTML += 
+                            `<a href= "" >${company[i].name}</a>`
+ } 
+                        
 })
 .catch(error => console.log(error))
 
@@ -53,7 +84,7 @@ fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${ap
     
     for(let i=0; i<info.length; i++){
         slider.innerHTML += `<li>
-                                <a href="detallep.html?id="${info[i].id}">
+                                <a href="detallep.html?id=${info[i].id}"> 
                                     <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
                                   
                                 </a>

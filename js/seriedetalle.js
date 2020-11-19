@@ -1,79 +1,128 @@
-let media ="tv";
-let timeWindow = "week";
-let apiKey = "764e5562e5fed92cb370d453ac0ed8a3";
-let url = `https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${apiKey}`;
-
-let slider = document.querySelector('.uk-slider-items')
-
-
-fetch(url)
-.then(function (respuestas){
-    return respuestas.json()
-})
-
-.then(function(data){
-   /*  console.log(data.results); */
-    let info = data.results;
-    
-    for(let i=0; i<info.length; i++){
-        slider.innerHTML += `<li>
-                                <a href="detalles.html?id=${info[i].id}">
-                                    <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
-                                  
-                                </a>
-                            </li>`
-    }
-        
-})
-.catch(error => console.log(error))
-
-
-
-/* info de serie */
 let queryString = window.location.search;
 console.log(queryString);
 let queryObject = new URLSearchParams(queryString)
 let id = queryObject.get ('id');
 console.log(id);
 
-/* let apiKey = "764e5562e5fed92cb370d453ac0ed8a3" */
-/* let url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`; */
+let apiKey = "764e5562e5fed92cb370d453ac0ed8a3"
+let url = `https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}`;
 
 let elementos = document.querySelector('.elementos')
-
-fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=764e5562e5fed92cb370d453ac0ed8a3`)
+let descripcion = document.querySelector('.middle-uno')
+let titulo = document.querySelector('.titulo')
+let generos = document.querySelector ('.tipos-g')
+let companias = document.querySelector('.tipos-c')
+let release = document.querySelector ('.release')
+let foto = document.querySelector('.foto')
+let votos = document.querySelector('.votos')
+let temp = document.querySelector('.middle-between')
+fetch(url)
 .then(function (respuestas){
     return respuestas.json()
 })
 
 .then(function(data){
-  console.log(data) 
-	elementos.style.backgroundImage = `url(https://image.tmdb.org/t/p/w500/${data.backdrop_path})`
-	 
-	let detalles = document.querySelector('#detalles')
-	/* let info = data.results;
-    for(let i=0; i<info.length; i++){
-	   detalles.innerHTML += 
-							`<section class="middle-uno">
-									
-									<p>${info[i].overview}</p>
+    console.log(data)
+    let genero = data.genres
+    console.log(genero);
+    let company = data.production_companies
+	console.log(company);
+	/* let fecha = data.episode_run_time.__proto__
+	console.log(fecha); */
+	let temporadas = data.seasons
 
-									<div class="infodesktop">
-										<p class="edad"> ${info[i].vote_average}</p>
-										
-							</div>
-								
-							</section>
-							<section class="middle-dos">
-									<p><strong> Elenco:</strong> <a href="actor.html">Millie Bobby Brown</a>; <a href="actor.html">Finn Wolfhard</a>; <a href="actor.html">Noah Schnapp</a>; <a href="actor.html">Gaten Matarazzo</a>; <a href="actor.html">Caleb McLaughlin</a>; <a href="actor.html">Joe Keery</a>;<a href="actor.html">Natalia Dyer</a>;
-									<a href="actor.html">David Harbour</a>;<a href="actor.html">Charlie Heaton</a>; <a href="actor.html">Sadie Sink</a></p>
-									<p><strong> Directores: </strong> <a href="">Matt Duffer</a>; <a href="">Shawn Levy</a>; <a href="">Ross Duffer</a>; <a href="">Sean Astin</a> </p>
-									<p> <strong>Año:</strong> <a href="">2016</a></p>
-									<p><strong> Géneros:</strong> <a href="generos.html">Ciencia ficción</a>; <a href="generos.html">Tv para adolescentes</a>; <a href="generos.html">Thrillers</a></p>
-									<p><strong> Nominaciones: </strong>Premio Óscar al Mejor Maquillaje y Peinado; Teen Choice Award a la Mejor Película de Drama; Premio de la Crítica Cinematográfica al mejor intérprete joven; Critics' Choice Movie Award al Mejor Maquillaje; Teen Choice Award a la Mejor Actriz - Drama, Acción, Aventura; Mejor Maquillaje y Peluquería; Critics' Choice Movie Award al Mejor Guión Adaptado; Teen Choice Award al Mejor Actor de Película de Drama.</p>
-								
-							</section> `
-    } */
-    
+  
+    titulo.innerHTML += `<h2 class="titu" >${data.original_name}</h2>`
+    votos.innerHTML += 
+                        `<p class="valor">" Vote% ${data.vote_average} "</p>`
+    descripcion.innerHTML +=
+                           ` <div class="infodesktop">
+                                <p class="tag">${data.tagline}</p>
+                                
+                            </div>
+                            <p class="descripcion"> "${data.overview}"</p>`
+/* 
+    release.innerHTML += 
+						`<p class= "release" >  ${data.release_date}</p>` */
+						
+
+    foto.innerHTML=
+				`<img src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="">`
+				
+
+    for(let i=0; i<genero.length; i++){
+    generos.innerHTML += 
+                       `<a href= "" >${genero[i].name}</a>`
+                    }
+
+ for(let i=0; i<company.length; i++){
+     companias.innerHTML += 
+                            `<a href= "" >${company[i].name}</a>`
+ } 
+/* 
+ for(let i=0; i<fecha.length; i++){
+	release.innerHTML += 
+						   `<a href= "" >${fecha[i].first_air_date}</a>`
+}  */
+	release.innerHTML += 
+						`<p >${data.first_air_date}</p>`
+for(let i=0; i<temporadas.length; i++){
+	temp.innerHTML += 
+							`<div > 
+								<h2 class= "nombreTemp" >${temporadas[i].name} </h2>
+								<p class="descripcionTemp">${temporadas[i].overview} </p>
+							</div>`
+	} 
 })
+.catch(error => console.log(error))
+
+
+//slider por AJV
+
+let media ="tv";
+let timeWindow = "week";
+
+
+
+let slider = document.querySelector('.uk-slider-items')
+
+
+fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${apiKey}`)
+
+
+
+.then(function(data){
+    console.log(data.results);
+    let info = data.results;
+    /* 
+    for(let i=0; i<info.length; i++){
+        slider.innerHTML += `<li>
+                                <a href="detalles.html?id=${info[i].id}"> 
+                                    <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
+                                  
+                                </a>
+                            </li>`
+    }*/
+        
+})
+.catch(error => console.log(error))
+
+
+fetch(`https://api.themoviedb.org/3/tv/${id}/reviews?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US&page=1`)
+
+.then(function (respuestas){
+    return respuestas.json()
+})
+.then(function(data){
+	console.log(data)
+	let rev = data.results
+	let reviews = document.querySelector ('.reviews')
+
+	for(let i=0; i<rev.length; i++){
+		reviews.innerHTML= 
+							`<h3>${rev[i].author}</h3>
+							<p>${rev[i].content}</p>`
+	}
+})
+
 .catch(error => console.log(error))

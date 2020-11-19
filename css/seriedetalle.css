@@ -65,6 +65,8 @@ body{
   }
   nav ul li a:hover{
     background: #4a4a4a;
+    color: #fff;
+    text-decoration: none;
   }
   
   .buscador{
@@ -119,9 +121,7 @@ body{
     align-items: center;
 
 }
-.infodesktop{
-    display: none;
-}
+
 .info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -165,6 +165,7 @@ body{
 .but .button:hover{
     background: white;
     color: black;
+    text-decoration: none;
 }
 
 
@@ -175,54 +176,8 @@ a {
   color: #fff;
 }
 
-/* nav de temporadas*/
-.temp-cap{
-    width: auto;
-    margin-bottom: 30px;
-    
 
- }
- ul{
-    padding-inline-start: 0px;
- }
-
-.temporada li {
-    list-style-type: none;
-    
-}
-.temporada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    
-}
-
-.temporada li a {
-    background-color: #4a4a4a;
-    color: #fff;
-    padding: 10px 15px;
-    display: block;
-    width: 135px;
-    font-size: 15px;
-    
-}
-.temporada li a:hover{
-    background: rgb(214, 207, 207);
-}
-.temporada li ul {
-    display: none;
-    position: absolute;
-    min-width: 140px;
-    z-index: 999;
-}
-.temporada li:hover > ul{
-    display: block;
-    
-}
-
-
-.middle-uno, .middle-dos{
+.middle-uno, .middle-dos, .middle-between div{
     background-color: rgba(53, 49, 49, 0.5);
     opacity: 90%;
     text-align: justify;
@@ -231,13 +186,37 @@ a {
 }
 
 .middle-dos a:hover{
-    color: #7CE3F2;
+    color: white;
     text-decoration: underline;
 }
 
 
 
+.release{
+  text-align: center;
+}
 
+#detalles h2{
+  color: #fff;
+  text-align: center;
+  margin-top: 17px;
+  font-size: 24px;
+  margin-bottom: 7px;
+
+}
+.titu{
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  margin-top: 28px;
+}
+.tipos-r, .tipos-g, .tipos-c{
+  margin: 5px;
+  text-align: center;
+}
+.tag{
+  text-align: center;
+}
 
 
 /*estrellas de valoración */
@@ -266,6 +245,7 @@ a {
 .ec-stars-wrapper:hover a {
     color: orange;
     transition: all 0.3s linear;
+    text-decoration: none;
 }
 /*
  * El selector de hijo, es necesario para aumentar la especifidad
@@ -276,6 +256,13 @@ a {
 }
 /*fin*/
 
+.puntos{
+  margin-top: 15px;
+  display: flex;
+}
+.valor{
+  margin-left: 75px
+}
 
 
 h3 {
@@ -311,9 +298,7 @@ footer h3{
 /* desktop*/
 @media(min-width:1024px){
     
-    .foto{
-        display: none;
-    }
+    
     header img{
         width: 250px;
         height: 100%;
@@ -363,24 +348,8 @@ footer h3{
          font-size: 22px;
      }
     
-     .elementos{
-         height: 700px;
-         background:linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0,0.50)100%), url(../images/series/strangerthings-portada.jpg);
-         background-position: center center;
-         background-size: cover;
-         display: flex;
-         flex-direction: row;
-         flex-wrap: wrap;
-         align-items: flex-end;
-         justify-content: space-between;
-         margin-right: 0;
-         padding: 20px;
-         margin-bottom: 20px;
-        
-     }
-     .info{
-         display: none;
-      }
+     
+     
       .infodesktop{
           display: block;
           display: flex;
@@ -399,13 +368,10 @@ footer h3{
          margin-inline-start: 5px;
      }
      
-     .temporada li a {
-         width: 180px;
-         font-size: 20px;
-     }
+    
      #detalles{
          display: grid;
-         grid-template-columns:  1fr 2fr;
+         grid-template-columns:  1fr 1fr 1fr;
     
          justify-content: center;
          align-items: center;
@@ -414,7 +380,7 @@ footer h3{
          
  
      }
-     .middle-uno, .middle-dos{
+     .middle-uno, .middle-dos, .middle-between div{
          background: #000000;
          line-height: 30px;
          
@@ -434,6 +400,31 @@ footer h3{
     footer .redes{
       display: flex;
     }
+    .valoracion a{
+      color: white;
+       }
+      .but a{
+        background: rgba(196, 187, 187, 0.5);
+        border: none;
+        padding: 10px;
+        color: #fff;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        font-size: 20px;
+        border-radius: 3px;
+        text-align: center;
+        width: 250px;
+     
+       } 
+       .elementos{
+         display: flex;
+         justify-content: space-between;
+         margin: 20px;
+       }
+       .titu{
+         font-size: 70px;
+       }
  }
 
 .vermas{
