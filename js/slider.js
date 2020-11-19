@@ -26,7 +26,6 @@ fetch(url)
                                 </a>
                             </li>`
     }
-        
-})
-.catch(error => console.log(error))
 
+})
+.catch(error => console.log(error));  
