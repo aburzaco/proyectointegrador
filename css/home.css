@@ -167,10 +167,12 @@ input{
   }
 
 
-  
-
- 
-
+  .uk-slider-items img{ 
+  transition: 0.2s;
+}
+.uk-slider-items img:hover{
+  transform: scale(1.5)
+}
 
  h3 {
     text-align: center;
@@ -224,9 +226,7 @@ footer h3{
   .lanzamiento{
     display: none;
   }
-  .main-peli img{
-    display: none;
-  }
+ 
   
  
   header img{
@@ -273,18 +273,7 @@ input{
   color: #fff;
   padding: 5px;
 }
-  .main-peli{
-    font-size: 16px;
-    min-height: 650px;
-    width: fit-content;
-    background: linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0,0.50)100%), url(../images/peliculas/palmsprings.jpg);
-    color: #ffffff;
-    background-size: cover;
-    background-position:  center center;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: flex-end;
-  }
+
   .main-peli .titulo{
     font-weight: 600;
     font-size: 60px;
@@ -314,6 +303,10 @@ input{
     grid-template-columns: 1fr 1fr 1fr;
     width: 400px;
    
+  }
+  .flex{
+    display: flex;
+    
   }
   .button{
     width: 168px;

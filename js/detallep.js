@@ -48,10 +48,10 @@ fetch(url)
                         `<p class= "release" >  ${data.release_date}</p>`
     if(poster == ""){
         foto.innerHTML +=
-                `<img src="https://image.tmdb.org/t/p/w500/${poster}" alt="">`
-     } /* else{
-        foto.innerHTML+= `<img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">`
-     } */
+                `<img src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt="">`
+     } else{
+        foto.innerHTML+= `<img src="https://image.tmdb.org/t/p/w500/${poster}" alt="">`
+     }
     for(let i=0; i<genero.length; i++){
     generos.innerHTML += 
                        `<a href= "generodetalle.html?id=${genero[i].id}" >${genero[i].name}, </a>`

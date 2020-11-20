@@ -16,8 +16,6 @@ fetch(`https://api.themoviedb.org/3/discover/${media}?api_key=764e5562e5fed92cb3
     let peliculas = document.querySelector ('.ps-accion')
     let info = data.results
     console.log(info);
-  
-
 
  
    
@@ -53,3 +51,23 @@ fetch(`https://api.themoviedb.org/3/discover/${mediaDos}?api_key=764e5562e5fed92
 })
 .catch(error => console.log(error))
 
+let generoMovie = document.querySelector('.nombre')
+
+
+fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US')
+.then(function (respuestas){
+    return respuestas.json()
+})
+
+.then(function(data){
+    console.log(data.genres);
+   	let genres = data.genres;
+    
+    for(let i=0; i<genres.length; i++){
+        if (genres[i].id== id){
+        generoMovie.innerText = `	${genres[i].name}`
+        }
+    }
+        
+})
+.catch(error => console.log(error))

@@ -135,7 +135,7 @@ body{
 .but i{
     margin-right: 10px;
 }
- .button {
+ .button, .send-review{
     background: rgba(196, 187, 187, 0.5);
     border: none;
     padding: 10px;
@@ -148,7 +148,11 @@ body{
     text-align: center;
    
 }
-
+.send{
+display: flex;
+justify-content: center;
+  margin-bottom: 30px;
+}
 
 .but{
     display: grid;
@@ -187,7 +191,7 @@ a {
   text-align: center;
 }
 
-#detalles h2, .reviews h2, .act h2{
+#detalles h2, .reviews h2, .act h2, .revt{
   color: #fff;
   text-align: center;
   margin-top: 17px;
@@ -289,7 +293,20 @@ footer img{
 footer h3{
 font-size: 19px;
 }
+.form{
+  display: block;
+}
+.form label, .form input{
+  display: block;
 
+  margin: 30px;
+}
+#your-review{
+  height: 200px;
+}
+.form input{
+  width: 90%;
+}
 
 
 

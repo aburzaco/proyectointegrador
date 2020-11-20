@@ -85,3 +85,27 @@ fetch("https://api.themoviedb.org/3/trending/tv/day?api_key=764e5562e5fed92cb370
 
 })
 .catch(error => console.log(error));
+
+
+/*peli principal*/
+
+fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=764e5562e5fed92cb370d453ac0ed8a3`)
+.then(function (respuestas){
+    return respuestas.json()
+})
+
+.then(function(data){
+    console.log(data.results);
+    let info = data.results;
+    let peli = document.querySelector('.peli-principal')
+    let titulo = document.querySelector('.titulo')
+    let desc = document.querySelector ('.descripcion')
+    let detalle = document.querySelector('.but')
+    
+        peli.innerHTML += `<img src="https://image.tmdb.org/t/p/w500${info[0].backdrop_path}" alt="">`
+        titulo.innerText = `${info[0].title}`
+        desc.innerText = `${info[0].overview}`
+        detalle.innerHTML +=`<a role="button" href="detallep.html?id=${info[0].id}" class="button" class="detalle">  <i class="fas fa-info-circle"></i>More details</a>`
+
+})
+.catch(error => console.log(error))

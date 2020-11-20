@@ -51,7 +51,7 @@ fetch(url)
 
     for(let i=0; i<genero.length; i++){
     generos.innerHTML += 
-                       `<a href= "" >${genero[i].name}</a>`
+                       `<a href= "generodetalle.html?id=${genero[i].id}" >${genero[i].name}</a>`
                     }
 
  for(let i=0; i<company.length; i++){
