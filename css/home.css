@@ -63,9 +63,12 @@ nav ul li a{
   padding: 2px 8px;
   transition: all 0.5s linear;
   border-radius: 3px;
+  color: #fff;
 }
 nav ul li a:hover{
   background: #4a4a4a;
+  color: #fff;
+  text-decoration: none;
 }
 
 .buscador{
@@ -166,76 +169,7 @@ input{
 
   
 
- /*tendencias*/
-  .tendencias{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .loimposible{
-    display: none;
-  }
-
-  /*mas vistas*/     
-  .vistas {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-  }
-  .avatar{
-    display: none;
-  }
-
-  /*documentales*/
-  .documentales{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-.atleta{
-  display: none;
-}
-
-
- /*recomendadas*/
  
-  .recomendadas{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .chihuahua{
-    display: none;
-  }
-
-/*series*/
-.series{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.dark{
-  display: none;
-}
 
 
  h3 {
@@ -260,22 +194,6 @@ input{
 
 
 
-  /*zoom de imagenes*/
-.peli-serie a{
-  text-align: center;
-}
-.peli-serie img{
-  width: 205px;
-  height: 280px;
-}
-  .peli-serie img{
-    transition: transform 0.4s;
-  }
-  .peli-serie img:hover{
-    transform: scale(1.5);
-  }
-  
-  
 
   
   a h3:hover {
@@ -299,6 +217,7 @@ input{
   }
 footer h3{
   font-size: 19px;
+  color: #fff;
 }
 
 @media(min-width:1024px){
