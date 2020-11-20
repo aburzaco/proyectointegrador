@@ -71,3 +71,22 @@ fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=764e5562e5fed92cb37
         
 })
 .catch(error => console.log(error))
+
+
+let generoSerie = document.querySelector('.nombre')
+fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=764e5562e5fed92cb370d453ac0ed8a3&language=en-US')
+.then(function (respuestas){
+    return respuestas.json()
+})
+
+.then(function(data){
+    console.log(data.genres);
+   	let genres = data.genres;
+    
+       for(let i=0; i<genres.length; i++){
+        if (genres[i].id== id){
+        generoMovie.innerText = `	${genres[i].name}`
+        }
+    } 
+})
+.catch(error => console.log(error))

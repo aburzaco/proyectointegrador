@@ -16,6 +16,8 @@ let release = document.querySelector ('.release')
 let foto = document.querySelector('.foto')
 let votos = document.querySelector('.votos')
 let temp = document.querySelector('.middle-between')
+let tag = document.querySelector('.infodesktop')
+
 fetch(url)
 .then(function (respuestas){
     return respuestas.json()
@@ -30,15 +32,13 @@ fetch(url)
 
 	let temporadas = data.seasons
 
-  
+    tag.innerHTML+= `<p class="tag">${data.tagline}</p>`
     titulo.innerHTML += `<h2 class="titu" >${data.original_name}</h2>`
+
     votos.innerHTML += 
                         `<p class="valor">" Vote% ${data.vote_average} "</p>`
     descripcion.innerHTML +=
-                           ` <div class="infodesktop">
-                                <p class="tag">${data.tagline}</p>
-                                
-                            </div>
+                           ` 
                             <p class="descripcion"> "${data.overview}"</p>`
 /* 
     release.innerHTML += 

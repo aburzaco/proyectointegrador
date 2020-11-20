@@ -15,6 +15,7 @@ let companias = document.querySelector('.tipos-c')
 let release = document.querySelector('.tipos-r')
 let foto = document.querySelector('.foto')
 let votos = document.querySelector('.votos')
+let tag = document.querySelector('.infodesktop')
 fetch(url)
 .then(function (respuestas){
     return respuestas.json()
@@ -34,14 +35,12 @@ fetch(url)
     } else if (data.media_type == "movie"){
       titulo.innerHTML += `<h2>${data.title}</h2>`
     } */
+    tag.innerHTML += ` <p class="tag">${data.tagline}</p>`
     titulo.innerHTML += `<h2 class="titu" >${data.title}</h2>`
     votos.innerHTML += 
                         `<p class="valor">" Vote% ${data.vote_average} "</p>`
     descripcion.innerHTML +=
-                           ` <div class="infodesktop">
-                                <p class="tag">${data.tagline}</p>
-                                
-                            </div>
+                           ` 
                             <p class="descripcion"> "${data.overview}"</p>`
 
     release.innerHTML += 
