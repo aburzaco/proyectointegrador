@@ -61,6 +61,29 @@ fetch(url)
                             `<a href= "" >${company[i].name}</a>`
  } 
                         
+ /*favs*/
+ let storage = localStorage.getItem('favoritos')
+ console.log(storage);
+ if (storage===null){
+     localStorage.setItem('favoritos', '[]')
+ }
+ 
+
+ let button =document.querySelector('.favoritos')
+ console.log(button);
+ button.addEventListener('click', function(){
+     
+     let storageJs =JSON.parse(storage)
+     if(!storageJs.includes(id)){
+         storageJs.push(id)
+     }else{
+         storageJs = storageJs.filter (function(movie){
+             return movie != id
+         })
+     }
+     localStorage.setItem('favoritos',JSON.stringify(storageJs))
+     
+ })
 })
 .catch(error => console.log(error))
 

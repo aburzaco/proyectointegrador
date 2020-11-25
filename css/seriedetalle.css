@@ -142,7 +142,7 @@ body{
 .but i{
     margin-right: 10px;
 }
- .button, .send-review{
+ .button, .send-review, .favoritos{
     background: rgba(196, 187, 187, 0.5);
     border: none;
     padding: 10px;
@@ -154,6 +154,17 @@ body{
     border-radius: 3px;
     text-align: center;
    
+}
+.favoritos{
+  display: flex;
+  align-items: center;
+}
+.favoritos i{
+  margin: 5px;
+}
+.add{
+  display: flex;
+  justify-content: center;
 }
 .but{
     display: grid;

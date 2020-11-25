@@ -135,7 +135,7 @@ body{
 .but i{
     margin-right: 10px;
 }
- .button, .send-review{
+ .button, .send-review, .favoritos{
     background: rgba(196, 187, 187, 0.5);
     border: none;
     padding: 10px;
@@ -146,7 +146,18 @@ body{
     font-size: 15px;
     border-radius: 3px;
     text-align: center;
+    align-items: center;
    
+}
+.favoritos{
+  display: flex;
+}
+.favoritos i{
+  margin: 5px;
+}
+.add{
+  display: flex;
+  justify-content: center;
 }
 .send{
 display: flex;
