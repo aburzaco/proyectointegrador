@@ -1,8 +1,8 @@
 let queryString = window.location.search;
-console.log(queryString);
+//console.log(queryString);
 let queryObject = new URLSearchParams(queryString)
 let id = queryObject.get ('id');
-console.log(id);
+//console.log(id);
 
 let apiKey = "764e5562e5fed92cb370d453ac0ed8a3"
 let url = `https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}`;
@@ -24,11 +24,11 @@ fetch(url)
 })
 
 .then(function(data){
-    console.log(data)
+    //console.log(data)
     let genero = data.genres
-    console.log(genero);
+    //console.log(genero);
     let company = data.production_companies
-	console.log(company);
+	//console.log(company);
 
 	let temporadas = data.seasons
 
@@ -92,7 +92,7 @@ fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${ap
 })
 
 .then(function(data){
-    console.log(data.results);
+    //console.log(data.results);
     let info = data.results;
     
     for(let i=0; i<info.length; i++){
@@ -105,26 +105,32 @@ fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${ap
     }
         
     /*favs*/
-    let storage = localStorage.getItem('favoritos')
+    let storage = localStorage.getItem('favoritosSerie')
     console.log(storage);
     if (storage===null){
-        localStorage.setItem('favoritos', '[]')
+        localStorage.setItem('favoritosSerie', '[]')
     }
     
 
     let button =document.querySelector('.favoritos')
- console.log(button);
+ //console.log(button);
+ let storageJs =JSON.parse(storage)
+ if(storageJs.includes(id)){
+    button.innerHTML = '<i class="fas fa-minus"></i> Remove from favourites'
+ }
  button.addEventListener('click', function(){
-     
-     let storageJs =JSON.parse(storage)
+   console.log("click");
+    
      if(!storageJs.includes(id)){
          storageJs.push(id)
+         button.innerHTML = '<i class="fas fa-minus"></i> Remove from favourites'
      }else{
          storageJs = storageJs.filter (function(movie){
              return movie != id
          })
+         button.innerHTML = '<i class="fas fa-plus"></i>  Add to favourites'
      }
-     localStorage.setItem('favoritos',JSON.stringify(storageJs))
+     localStorage.setItem('favoritosSerie',JSON.stringify(storageJs))
      
  })
 })

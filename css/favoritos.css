@@ -118,18 +118,18 @@ background-color:  #252525;
 
 
 /*peliculas*/
-.ps-accion{
+.favoritos{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
   margin: 5px;
 }
-.ps-accion img{
+.favoritos img{
   width: 180px;
   height: 250px;
   transition: transform 0.4s;
 }
-.ps-accion img:hover{
+.favoritos img:hover{
   transform: scale(1.5);
 }
  a{
@@ -217,11 +217,11 @@ font-size: 19px;
     padding: 20px;
    
   }
-  .ps-accion{
+  .favoritos{
     grid-template-columns: repeat(4, 1fr);
     
   }
-  .ps-accion img{
+  .favoritos img{
     width: 240px;
      height: 320px;
   }
@@ -242,10 +242,8 @@ font-size: 19px;
  
 }
 @media(min-width:1370px){
- .ocultar{
-   display: block;
- }
- .ps-accion{
+
+ .fa{
    grid-template-columns: repeat(5, 1fr);
  }
 }

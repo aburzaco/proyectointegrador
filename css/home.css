@@ -174,7 +174,7 @@ input{
   transform: scale(1.5)
 }
 
- h3 {
+ h3, .titulo{
     text-align: center;
     overflow: hidden;
     background-color:#252525;

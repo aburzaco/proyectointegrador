@@ -62,34 +62,70 @@ fetch(url)
  } 
                         
  /*favs*/
- let storage = localStorage.getItem('favoritos')
+ let storage = localStorage.getItem('favoritosPeli')
  console.log(storage);
  if (storage===null){
-     localStorage.setItem('favoritos', '[]')
+     localStorage.setItem('favoritosPeli', '[]')
  }
  
 
  let button =document.querySelector('.favoritos')
  console.log(button);
+ let storageJs =JSON.parse(storage)
+ if(storageJs.includes(id)){
+    button.innerHTML = '<i class="fas fa-minus"></i> Remove from favourites'
+ }
  button.addEventListener('click', function(){
      
-     let storageJs =JSON.parse(storage)
+     
+    
      if(!storageJs.includes(id)){
          storageJs.push(id)
+        
+         button.innerHTML = '<i class="fas fa-minus"></i> Remove from favourites'
      }else{
          storageJs = storageJs.filter (function(movie){
              return movie != id
          })
+         button.innerHTML = '<i class="fas fa-plus"></i>  Add to favourites'
      }
-     localStorage.setItem('favoritos',JSON.stringify(storageJs))
+     localStorage.setItem('favoritosPeli',JSON.stringify(storageJs))
      
+
+    
+
+   
  })
+
 })
 .catch(error => console.log(error))
 
 
+function sacarDeFavoritos(){
+    
+     
+     
+   
+    if(!storageJs.includes(id)){
+        storageJs.push(id)
+        let storageJs =JSON.parse(storage)
+        
+    }else{
+        storageJs = storageJs.filter (function(movie){
+            return movie != id
+        })
+    }
+    localStorage.setItem('favoritos',JSON.stringify(storageJs))
+    
 
-//slider por AJV
+   
+
+   }
+
+
+
+
+//slider
 
 let media ="movie";
 let timeWindow = "week";
