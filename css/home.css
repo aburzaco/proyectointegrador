@@ -198,6 +198,12 @@ input{
   }
   
 
+.radioBut{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
 
 
 
@@ -336,6 +342,13 @@ input{
     margin: 10px;
   }
   footer .redes{
+    display: flex;
+  }
+  .radioBut{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .buscador form {
     display: flex;
   }
  
