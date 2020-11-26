@@ -149,3 +149,7 @@ if(mediaType == "all"){
         })
 }
 
+window.addEventListener ('load', function(){
+    let spin = document.querySelector ('.load')
+    spin.style.display = "none"
+})
