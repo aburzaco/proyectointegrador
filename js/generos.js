@@ -15,11 +15,11 @@ fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=764e5562e5fed92cb37
     for(let i=0; i<genres.length; i++){
 		generoMovie.innerHTML += `
 							
-							<ul>
+						
 								<li>
-									<a href="generodetalle.html?id=${genres[i].id}">${genres[i].name}</a>
+									<a class= "generos" href="generodetalle.html?id=${genres[i].id}">${genres[i].name}</a>
 								</li>
-							</ul>`
+							`
     }
         
 })
@@ -41,11 +41,11 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=764e5562e5fed92cb370d4
     for(let i=0; i<genresTwo.length; i++){
 		generoSerie.innerHTML += `
 							
-							<ul>
+							
 								<li>
-									<a href="generodetalle.html?id=${genresTwo[i].id}">${genresTwo[i].name}</a>
+									<a class="generos" href="generodetalle.html?id=${genresTwo[i].id}">${genresTwo[i].name}</a>
 								</li>
-							</ul>`
+							`
     }
         
 })

@@ -196,3 +196,11 @@ fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=764e5562e5fed92c
 })
 
 .catch(error => console.log(error))
+
+
+/*send review*/
+let send = document.querySelector('.send-review')
+send.addEventListener('click', function(){
+    event.preventDefault();
+    
+})
