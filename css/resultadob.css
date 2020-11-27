@@ -99,7 +99,7 @@ body{
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  input{
+  .buscador input{
     width: 100%;
     border: none;
     background: rgba(196, 187, 187, 0.5);
@@ -167,6 +167,7 @@ h3{
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
   margin: 5px;
+  padding: 17px;
 }
 .resultados img{
   width: 180px;
@@ -223,7 +224,7 @@ ul li{
      
       align-items: center;
     }
-    input{
+    .buscador input{
       width: 196px;
       border: none;
       background: rgba(196, 187, 187, 0.5);
@@ -266,7 +267,7 @@ ul li{
       width: 240px;
        height: 320px;
     }
-    .buscador form {
+    .buscador form{
       display: grid;
       grid-column: 1fr;
     }
