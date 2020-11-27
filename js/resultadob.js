@@ -28,12 +28,14 @@ if(mediaType == "movie"){
             let resultados = document.querySelector('.resultados');
            
 
-            for (let i = 0; i < 4; i++) {
-                resultados.innerHTML += `<li>
-                                            <a href="detallep.html?id=${info[i].id}">
-                                            <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
-                                            </a>
-                                      </li>`
+            for (let i = 0; i <info.length; i++) {
+                 resultados.innerHTML += `<li>
+                                        <a href="detallep.html?id=${info[i].id}">
+                                        <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="Image not available: ${info[i].title}">
+                                        </a>
+                                      </li>`                       
+                
+                
              }
         })
         .catch(function (error) {
@@ -59,12 +61,14 @@ if(mediaType == "tv"){
             
 
             for (let i=0; i<info.length; i++) {
-                resultados.innerHTML += `<li>
-                                                     <a href="detalles.html?id=${info[i].id}">
-                                                        <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
-                                                     </a>
-                                         </li>`
-            }
+                
+                    resultados.innerHTML += `<li>
+                                                <a href="detalles.html?id=${info[i].id}">
+                                                <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="Image not available: ${info[i].original_name}">
+                                                </a>
+                                            </li>`  
+                } 
+        
 
         })
         .catch(function (error) {
@@ -90,12 +94,18 @@ if(mediaType == "person"){
 
             for (let i=0; i<info.length; i++) {
         
-                resultados.innerHTML += `<li>
-                                                     <a href="actor.html?id=${info[i].id}">
-                                                        <img src="https://image.tmdb.org/t/p/w500${info[i].profile_path}" alt="">
-                                                     </a>
-                                         </li>`
-            }
+                
+                
+                        resultados.innerHTML += `<li>
+                                                    <a href="actor.html?id=${info[i].id}">
+                                                    <img src="https://image.tmdb.org/t/p/w500${info[i].profile_path}" alt="Image not available: ${info[i].name}">
+                                                    </a>
+                                                 </li>`
+
+                       
+                    } 
+                
+             
 
         })
         .catch(function (error) {
@@ -125,19 +135,19 @@ if(mediaType == "all"){
                 if(info[i].media_type == "movie"){
                     resultados.innerHTML += `<li>
                                                     <a href="detallep.html?id=${info[i].id}">
-                                                    <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
+                                                    <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="Image not available: ${info[i].name}">
                                                     </a>
                                             </li>`
                 } else if (info[i].media_type == "tv"){
                     resultados.innerHTML += `<li>
                                                 <a href="detalles.html?id=${info[i].id}">
-                                                <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
+                                                <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="Image not available: ${info[i].original_name} ">
                                                 </a>
                                              </li>`
                 } else {
                     resultados.innerHTML += `<li>
                                                      <a href="actor.html?id=${info[i].id}">
-                                                        <img src="https://image.tmdb.org/t/p/w500${info[i].profile_path}" alt="">
+                                                        <img src="https://image.tmdb.org/t/p/w500${info[i].profile_path}" alt="Image not available: ${info[i].name}">
                                                      </a>
                                          </li>`
                 }

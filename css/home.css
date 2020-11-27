@@ -105,7 +105,20 @@ input{
   padding: 5px;
 
 }
+.radioBut{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.radioBut label{
+  margin-left: 4px;
+  margin-right: 4px;
   
+}
+.radioBut input{
+  width: 10px;
+}
 
 
 
@@ -198,12 +211,7 @@ input{
   }
   
 
-.radioBut{
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
+
 
 
 
@@ -344,14 +352,21 @@ input{
   footer .redes{
     display: flex;
   }
-  .radioBut{
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+  
   .buscador form {
-    display: flex;
+    display: grid;
+    grid-column: 1fr;
   }
- 
+  .radioBut label{
+    margin-left: 0;
+    margin-right: 3px;
+  } 
+  .radioBut input{
+    width: initial;
+  }
+  .radioBut{
+    display:flex;
+  }
 }
 @media(min-width:1374px){
   .dark, .avatar, .loimposible, .chihuahua, .atleta{

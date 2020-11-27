@@ -102,7 +102,21 @@ body{
     padding: 5px;
   
   }
+  .radioBut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .radioBut label{
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 19px;
     
+  }
+  .radioBut input{
+    width: 10px;
+  }
 
 /*pelicula*/
 
@@ -459,11 +473,26 @@ font-size: 19px;
    .titu{
      font-size: 70px;
    }
+   .buscador form {
+    display: grid;
+    grid-column: 1fr;
+  }
+  .radioBut label{
+    margin-left: 0;
+    margin-right: 3px;
+  } 
+  .radioBut input{
+    width: initial;
+  }
+  .radioBut{
+    display:flex;
+  }
+ /* .contRad{
+   display: flex;
+   align-items: center;
+ } */
  }
-@media(min-width:1390px){
-  
-  
-}
+
 
 
 .vermas{

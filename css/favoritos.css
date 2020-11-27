@@ -116,6 +116,20 @@ background-color:  #252525;
 
 }
 
+.radioBut{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.radioBut label{
+  margin-left: 4px;
+  margin-right: 4px;
+  
+}
+.radioBut input{
+  width: 10px;
+}
 
 /*peliculas*/
 .favoritos{
@@ -238,6 +252,20 @@ font-size: 19px;
   }
   footer .redes{
     display: flex;
+  }
+  .buscador form {
+    display: grid;
+    grid-column: 1fr;
+  }
+  .radioBut label{
+    margin-left: 0;
+    margin-right: 3px;
+  } 
+  .radioBut input{
+    width: initial;
+  }
+  .radioBut{
+    display:flex;
   }
  
 }

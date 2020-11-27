@@ -23,7 +23,7 @@ https://api.themoviedb.org/3/person/${id}/combined_credits?api_key=764e5562e5fed
                                 ` <a href="detalles.html?id=${cast[i].id}"><img src="https://image.tmdb.org/t/p/w500${cast[i].poster_path}"></a>`
         }else if (cast[i].media_type == "movie"){
          peliculas.innerHTML += 
-                                ` <a href="detallep.html?id=${cast[i].id}"><img src="https://image.tmdb.org/t/p/w500${cast[i].poster_path}" alt=""></a>`
+                                ` <a href="detallep.html?id=${cast[i].id}"><img src="https://image.tmdb.org/t/p/w500${cast[i].poster_path}" alt="Image not available: ${info[i].name}"></a>`
 
         }
     }
@@ -46,3 +46,9 @@ fetch(`https://api.themoviedb.org/3/person/${id}?api_key=764e5562e5fed92cb370d45
                     `<img src="https://image.tmdb.org/t/p/w500${data.profile_path}" >`
 })
 .catch(error => console.log(error))
+
+
+
+
+
+    

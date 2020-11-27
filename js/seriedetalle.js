@@ -46,7 +46,7 @@ fetch(url)
 						
 
     foto.innerHTML=
-				`<img src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="">`
+				`<img src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" alt="Image not available">`
 				
 
     for(let i=0; i<genero.length; i++){

@@ -147,7 +147,7 @@ fetch(`https://api.themoviedb.org/3/trending/${media}/${timeWindow}?api_key=${ap
     for(let i=0; i<info.length; i++){
         slider.innerHTML += `<li>
                                 <a href="detallep.html?id=${info[i].id}"> 
-                                    <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="">
+                                    <img src="https://image.tmdb.org/t/p/w500${info[i].poster_path}" alt="Image not available: ${info[i].name}">
                                   
                                 </a>
                             </li>`

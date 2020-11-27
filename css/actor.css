@@ -104,6 +104,22 @@ body{
   
   }
     
+  .radioBut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .radioBut label{
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 19px;
+    
+  }
+  .radioBut input{
+    width: 10px;
+  }
+
 
 
 a {
@@ -298,7 +314,20 @@ font-size: 19px;
     footer .redes{
       display: flex;
     }
-   
+    .buscador form {
+      display: grid;
+      grid-column: 1fr;
+    }
+    .radioBut label{
+      margin-left: 0;
+      margin-right: 3px;
+    } 
+    .radioBut input{
+      width: initial;
+    }
+    .radioBut{
+      display:flex;
+    }
  }
  @media (min-width:1400px){
     .pitufos{

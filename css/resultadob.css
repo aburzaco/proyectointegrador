@@ -89,6 +89,7 @@ body{
     padding: 0;
   }
   
+  
   /*barradebuscar*/
   .buscador{
     text-align: center;
@@ -114,6 +115,21 @@ body{
     color: #fff;
     padding: 5px;
   
+  
+  }
+  .radioBut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  .radioBut label{
+    margin-left: 4px;
+    margin-right: 4px;
+    
+  }
+  .radioBut input{
+    width: 10px;
   }
    /*pie de pag*/
    footer{
@@ -250,6 +266,21 @@ ul li{
       width: 240px;
        height: 320px;
     }
+    .buscador form {
+      display: grid;
+      grid-column: 1fr;
+    }
+    .radioBut label{
+      margin-left: 0;
+      margin-right: 3px;
+    } 
+    .radioBut input{
+      width: initial;
+    }
+    .radioBut{
+      display:flex;
+    }
+   
 }  
 
     @media(min-width:1370px){
